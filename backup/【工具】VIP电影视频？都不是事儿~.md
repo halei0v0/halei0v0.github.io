@@ -11,3 +11,11 @@
 本站为广大网友提供优酷VIP解析，爱奇艺VIP解析，腾讯VIP解析，乐视VIP解析，芒果VIP解析等解析服务，让你省去购买视频VIP费用~~
 # 相关视频
 `Gmeek-html<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114866434088113&bvid=BV1ZBgczrEMg&cid=31098208447&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>`
+
+# 特殊情况
+如果遇到打开网址无对话框输入网址的情况
+举例：
+**https://jx.xmflv.cc/?url=,0%27**
+（此网址无对话框输入）
+## 解决办法
+**将“=”后面的字符更改为要看的电影或视频的链接即可~**
