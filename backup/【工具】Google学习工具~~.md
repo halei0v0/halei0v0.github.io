@@ -1,6 +1,8 @@
 # 前言
 >仅用于网络学习使用！请遵守相关法律法规！
 本文搬运Github项目原文章，仅作分享！
+相关视频教程：
+`Gmeek-html<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114907202719526&bvid=BV1eo8Mz3EPu&cid=31247959558&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>`
 # 工具
 Just Ceal It (可用于无代理合法抵御网络监听和开展网络研究)
 
