@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/119430179?v=4"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="# 前言
+>仅用于网络学习使用！请遵守相关法律法规！
+本文搬运Github项目原文章，仅作分享！
+# 工具
+Just Ceal It (可用于无代理合法抵御网络监听和开展网络研究)
+
+## 自我介绍
+**Sheas Cealer**: 一只基于 **WPF(.Net8)** 的桌面端 SNI 伪造工具
+
+* 适用平台: Windows (Win10 之前的系统版本请使用 [1.1.0](https://github.com/SpaceTimee/Sheas-Cealer/releases/tag/1.1.0)) (其他平台请参考[相关项目](https://github.com/SpaceTimee/Sheas-Cealer#相关项目))
+
+## 词汇解释
+**[Sheas Cealer Dictionary](https://github.com/SpaceTimee/Sheas-Cealer/wiki/Sheas-Cealer-Dictionary)**
+
+## 注意事项
+1. 内置伪造规则在 [Cealing Host 存储库](https://github.com/SpaceTimee/Cealing-Host) 持续更新
+2. Sheas Cealer 更新时不会覆盖已有的伪造规则，如需与上游同步，需点击**更新上游规则**按钮，或**手动修改覆盖**
+3. 本项目及所有相关资源仅供**抵御网络非法监听**和**开展网络安全研究**使用，无意绕过任何国家审查设备的审查
+4. 为避免不必要的麻烦，使用前请先阅读[**用户协议**](https://github.com/SpaceTimee/Sheas-Cealer#用户协议)
+5. Sheas Cealer 仍处于**开发阶段**，但每个正式版发布前会尽量确保其**稳定可用**
+
+## 用户协议
+1. [隐私政策](https://thoughts.teambition.com/share/6264eda98adeb10041b92fda#title=Sheas_Cealer_隐私政策)
+2. [使用协议](https://thoughts.teambition.com/share/6264edd78adeb10041b92fdb#title=Sheas_Cealer_使用协议)
+
+## 下载地址
+1. Github: [https://github.com/SpaceTimee/Sheas-Cealer/releases](https://github.com/SpaceTimee/Sheas-Cealer/releases)
+2. 群文件 (参与内测): 参考[联系方式](https://github.com/SpaceTimee/Sheas-Cealer#联系方式)
+
+> 出于不可抗力因素，Sheas Cealer 暂时无法再提供蓝奏云下载地址，在此依旧感谢蓝奏云一直以来的免费分发服务
+
+## 安装方式
+1. Setup 安装器 (首选): 下载 Sheas Cealer Setup.exe 并运行 -> 按照提示设置即可安装
+2. Zip 压缩包 (免安装): 下载 Sheas Cealer Zip.zip 并解压 -> 完成后即可直接使用
+
+> Scd 版本: Scd 版本内置 .Net 运行时，可在缺乏 .Net 运行时的环境下运行，但代价是更大的文件体积以及更差的跨平台能力，如果没有特殊原因，不建议使用 Scd 版本
+
+## 食用文档
+**[Sheas Cealer Documentation](https://github.com/SpaceTimee/Sheas-Cealer/wiki/Sheas-Cealer-Documentation)**
+
+## 项目构建
+[Sheas Cealer Build](https://github.com/SpaceTimee/Sheas-Cealer/wiki/Sheas-Cealer-Build)
+
+## 项目原理
+利用 Chromium 内核的启动参数特性伪造 SNI 拓展标记，详细原理可参考[这篇文章](https://nicebowl.fun/24_8)
+
+## 致谢名单
+* **kit: 为本项目提供全部的原理基础**
+* **NiceBowl: 为本项目提供详细的原理说明**
+
+## 开发者
+**Space Time**
+
+## 联系方式
+1. **QQ 群: 1034315671，716266896，338919498**
+2. **TG 群: [PixCealerChat](https://t.me/PixCealerChat)**
+3. 邮箱: Zeus6_6@163.com
+
+## 相关项目
+1. [Sheas Cealer Droid](https://github.com/SpaceTimee/Sheas-Cealer-Droid): Sheas Cealer 安卓端
+2. [Sheas Cealer Nix](https://github.com/SpaceTimee/Sheas-Cealer/tree/nix): Sheas Cealer 跨平台桌面端
+3. [Cealing Host](https://github.com/SpaceTimee/Cealing-Host): 最新的 Sheas Cealer 内置伪造规则
+4. [Sheas Dop](https://github.com/SpaceTimee/Sheas-Dop): DNS 抗污染解析工具 (Sheas Cealer 全局净化子项目)
+5. [Sheas Nginx](https://github.com/SpaceTimee/Sheas-Nginx): Pixiv Nginx 启动器 (Sheas Cealer 全局伪造 × Pixiv Nginx 合作子项目)
+6. [Bot CealingCat](https://github.com/SpaceTimee/Bot-CealingCat): 提供 Sheas Cealer 相关服务的 Telegram Bot
+7. [Console HostChecker](https://github.com/SpaceTimee/Console-HostChecker): Cealing Host 自动化检查脚本
+8. [Console HostGenerator](https://github.com/SpaceTimee/Console-HostGenerator): Cealing Host 自动化生成脚本
+
+## 许可证
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSpaceTimee%2FSheas-Cealer.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FSpaceTimee%2FSheas-Cealer?ref=badge_large)
+
+•ᴗ•。">
+<meta property="og:title" content="【工具】Google学习工具~~">
+<meta property="og:description" content="# 前言
+>仅用于网络学习使用！请遵守相关法律法规！
+本文搬运Github项目原文章，仅作分享！
+# 工具
+Just Ceal It (可用于无代理合法抵御网络监听和开展网络研究)
+
+## 自我介绍
+**Sheas Cealer**: 一只基于 **WPF(.Net8)** 的桌面端 SNI 伪造工具
+
+* 适用平台: Windows (Win10 之前的系统版本请使用 [1.1.0](https://github.com/SpaceTimee/Sheas-Cealer/releases/tag/1.1.0)) (其他平台请参考[相关项目](https://github.com/SpaceTimee/Sheas-Cealer#相关项目))
+
+## 词汇解释
+**[Sheas Cealer Dictionary](https://github.com/SpaceTimee/Sheas-Cealer/wiki/Sheas-Cealer-Dictionary)**
+
+## 注意事项
+1. 内置伪造规则在 [Cealing Host 存储库](https://github.com/SpaceTimee/Cealing-Host) 持续更新
+2. Sheas Cealer 更新时不会覆盖已有的伪造规则，如需与上游同步，需点击**更新上游规则**按钮，或**手动修改覆盖**
+3. 本项目及所有相关资源仅供**抵御网络非法监听**和**开展网络安全研究**使用，无意绕过任何国家审查设备的审查
+4. 为避免不必要的麻烦，使用前请先阅读[**用户协议**](https://github.com/SpaceTimee/Sheas-Cealer#用户协议)
+5. Sheas Cealer 仍处于**开发阶段**，但每个正式版发布前会尽量确保其**稳定可用**
+
+## 用户协议
+1. [隐私政策](https://thoughts.teambition.com/share/6264eda98adeb10041b92fda#title=Sheas_Cealer_隐私政策)
+2. [使用协议](https://thoughts.teambition.com/share/6264edd78adeb10041b92fdb#title=Sheas_Cealer_使用协议)
+
+## 下载地址
+1. Github: [https://github.com/SpaceTimee/Sheas-Cealer/releases](https://github.com/SpaceTimee/Sheas-Cealer/releases)
+2. 群文件 (参与内测): 参考[联系方式](https://github.com/SpaceTimee/Sheas-Cealer#联系方式)
+
+> 出于不可抗力因素，Sheas Cealer 暂时无法再提供蓝奏云下载地址，在此依旧感谢蓝奏云一直以来的免费分发服务
+
+## 安装方式
+1. Setup 安装器 (首选): 下载 Sheas Cealer Setup.exe 并运行 -> 按照提示设置即可安装
+2. Zip 压缩包 (免安装): 下载 Sheas Cealer Zip.zip 并解压 -> 完成后即可直接使用
+
+> Scd 版本: Scd 版本内置 .Net 运行时，可在缺乏 .Net 运行时的环境下运行，但代价是更大的文件体积以及更差的跨平台能力，如果没有特殊原因，不建议使用 Scd 版本
+
+## 食用文档
+**[Sheas Cealer Documentation](https://github.com/SpaceTimee/Sheas-Cealer/wiki/Sheas-Cealer-Documentation)**
+
+## 项目构建
+[Sheas Cealer Build](https://github.com/SpaceTimee/Sheas-Cealer/wiki/Sheas-Cealer-Build)
+
+## 项目原理
+利用 Chromium 内核的启动参数特性伪造 SNI 拓展标记，详细原理可参考[这篇文章](https://nicebowl.fun/24_8)
+
+## 致谢名单
+* **kit: 为本项目提供全部的原理基础**
+* **NiceBowl: 为本项目提供详细的原理说明**
+
+## 开发者
+**Space Time**
+
+## 联系方式
+1. **QQ 群: 1034315671，716266896，338919498**
+2. **TG 群: [PixCealerChat](https://t.me/PixCealerChat)**
+3. 邮箱: Zeus6_6@163.com
+
+## 相关项目
+1. [Sheas Cealer Droid](https://github.com/SpaceTimee/Sheas-Cealer-Droid): Sheas Cealer 安卓端
+2. [Sheas Cealer Nix](https://github.com/SpaceTimee/Sheas-Cealer/tree/nix): Sheas Cealer 跨平台桌面端
+3. [Cealing Host](https://github.com/SpaceTimee/Cealing-Host): 最新的 Sheas Cealer 内置伪造规则
+4. [Sheas Dop](https://github.com/SpaceTimee/Sheas-Dop): DNS 抗污染解析工具 (Sheas Cealer 全局净化子项目)
+5. [Sheas Nginx](https://github.com/SpaceTimee/Sheas-Nginx): Pixiv Nginx 启动器 (Sheas Cealer 全局伪造 × Pixiv Nginx 合作子项目)
+6. [Bot CealingCat](https://github.com/SpaceTimee/Bot-CealingCat): 提供 Sheas Cealer 相关服务的 Telegram Bot
+7. [Console HostChecker](https://github.com/SpaceTimee/Console-HostChecker): Cealing Host 自动化检查脚本
+8. [Console HostGenerator](https://github.com/SpaceTimee/Console-HostGenerator): Cealing Host 自动化生成脚本
+
+## 许可证
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FSpaceTimee%2FSheas-Cealer.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FSpaceTimee%2FSheas-Cealer?ref=badge_large)
+
+•ᴗ•。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://halei0v0.github.io/post/%E3%80%90-gong-ju-%E3%80%91Google-xue-xi-gong-ju-~~.html">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/119430179?v=4">
+<title>【工具】Google学习工具~~</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">【工具】Google学习工具~~</h1>
+<div class="title-right">
+    <a href="https://halei0v0.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/halei0v0/halei0v0.github.io/issues/24" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h1>前言</h1>
+<blockquote>
+<p>仅用于网络学习使用！请遵守相关法律法规！<br>
+本文搬运Github项目原文章，仅作分享！</p>
+</blockquote>
+<h1>工具</h1>
+<p>Just Ceal It (可用于无代理合法抵御网络监听和开展网络研究)</p>
+<h2>自我介绍</h2>
+<p><strong>Sheas Cealer</strong>: 一只基于 <strong>WPF(.Net8)</strong> 的桌面端 SNI 伪造工具</p>
+<ul>
+<li>适用平台: Windows (Win10 之前的系统版本请使用 <a href="https://github.com/SpaceTimee/Sheas-Cealer/releases/tag/1.1.0">1.1.0</a>) (其他平台请参考<a href="https://github.com/SpaceTimee/Sheas-Cealer#%E7%9B%B8%E5%85%B3%E9%A1%B9%E7%9B%AE">相关项目</a>)</li>
+</ul>
+<h2>词汇解释</h2>
+<p><strong><a href="https://github.com/SpaceTimee/Sheas-Cealer/wiki/Sheas-Cealer-Dictionary">Sheas Cealer Dictionary</a></strong></p>
+<h2>注意事项</h2>
+<ol>
+<li>内置伪造规则在 <a href="https://github.com/SpaceTimee/Cealing-Host">Cealing Host 存储库</a> 持续更新</li>
+<li>Sheas Cealer 更新时不会覆盖已有的伪造规则，如需与上游同步，需点击<strong>更新上游规则</strong>按钮，或<strong>手动修改覆盖</strong></li>
+<li>本项目及所有相关资源仅供<strong>抵御网络非法监听</strong>和<strong>开展网络安全研究</strong>使用，无意绕过任何国家审查设备的审查</li>
+<li>为避免不必要的麻烦，使用前请先阅读<a href="https://github.com/SpaceTimee/Sheas-Cealer#%E7%94%A8%E6%88%B7%E5%8D%8F%E8%AE%AE"><strong>用户协议</strong></a></li>
+<li>Sheas Cealer 仍处于<strong>开发阶段</strong>，但每个正式版发布前会尽量确保其<strong>稳定可用</strong></li>
+</ol>
+<h2>用户协议</h2>
+<ol>
+<li><a href="https://thoughts.teambition.com/share/6264eda98adeb10041b92fda#title=Sheas_Cealer_%E9%9A%90%E7%A7%81%E6%94%BF%E7%AD%96" rel="nofollow">隐私政策</a></li>
+<li><a href="https://thoughts.teambition.com/share/6264edd78adeb10041b92fdb#title=Sheas_Cealer_%E4%BD%BF%E7%94%A8%E5%8D%8F%E8%AE%AE" rel="nofollow">使用协议</a></li>
+</ol>
+<h2>下载地址</h2>
+<ol>
+<li>Github: <a href="https://github.com/SpaceTimee/Sheas-Cealer/releases">https://github.com/SpaceTimee/Sheas-Cealer/releases</a></li>
+<li>群文件 (参与内测): 参考<a href="https://github.com/SpaceTimee/Sheas-Cealer#%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F">联系方式</a></li>
+</ol>
+<blockquote>
+<p>出于不可抗力因素，Sheas Cealer 暂时无法再提供蓝奏云下载地址，在此依旧感谢蓝奏云一直以来的免费分发服务</p>
+</blockquote>
+<h2>安装方式</h2>
+<ol>
+<li>Setup 安装器 (首选): 下载 Sheas Cealer Setup.exe 并运行 -&gt; 按照提示设置即可安装</li>
+<li>Zip 压缩包 (免安装): 下载 Sheas Cealer Zip.zip 并解压 -&gt; 完成后即可直接使用</li>
+</ol>
+<blockquote>
+<p>Scd 版本: Scd 版本内置 .Net 运行时，可在缺乏 .Net 运行时的环境下运行，但代价是更大的文件体积以及更差的跨平台能力，如果没有特殊原因，不建议使用 Scd 版本</p>
+</blockquote>
+<h2>食用文档</h2>
+<p><strong><a href="https://github.com/SpaceTimee/Sheas-Cealer/wiki/Sheas-Cealer-Documentation">Sheas Cealer Documentation</a></strong></p>
+<h2>项目构建</h2>
+<p><a href="https://github.com/SpaceTimee/Sheas-Cealer/wiki/Sheas-Cealer-Build">Sheas Cealer Build</a></p>
+<h2>项目原理</h2>
+<p>利用 Chromium 内核的启动参数特性伪造 SNI 拓展标记，详细原理可参考<a href="https://nicebowl.fun/24_8" rel="nofollow">这篇文章</a></p>
+<h2>致谢名单</h2>
+<ul>
+<li><strong>kit: 为本项目提供全部的原理基础</strong></li>
+<li><strong>NiceBowl: 为本项目提供详细的原理说明</strong></li>
+</ul>
+<h2>开发者</h2>
+<p><strong>Space Time</strong></p>
+<h2>联系方式</h2>
+<ol>
+<li><strong>QQ 群: 1034315671，716266896，338919498</strong></li>
+<li><strong>TG 群: <a href="https://t.me/PixCealerChat" rel="nofollow">PixCealerChat</a></strong></li>
+<li>邮箱: <a href="mailto:Zeus6_6@163.com">Zeus6_6@163.com</a></li>
+</ol>
+<h2>相关项目</h2>
+<ol>
+<li><a href="https://github.com/SpaceTimee/Sheas-Cealer-Droid">Sheas Cealer Droid</a>: Sheas Cealer 安卓端</li>
+<li><a href="https://github.com/SpaceTimee/Sheas-Cealer/tree/nix">Sheas Cealer Nix</a>: Sheas Cealer 跨平台桌面端</li>
+<li><a href="https://github.com/SpaceTimee/Cealing-Host">Cealing Host</a>: 最新的 Sheas Cealer 内置伪造规则</li>
+<li><a href="https://github.com/SpaceTimee/Sheas-Dop">Sheas Dop</a>: DNS 抗污染解析工具 (Sheas Cealer 全局净化子项目)</li>
+<li><a href="https://github.com/SpaceTimee/Sheas-Nginx">Sheas Nginx</a>: Pixiv Nginx 启动器 (Sheas Cealer 全局伪造 × Pixiv Nginx 合作子项目)</li>
+<li><a href="https://github.com/SpaceTimee/Bot-CealingCat">Bot CealingCat</a>: 提供 Sheas Cealer 相关服务的 Telegram Bot</li>
+<li><a href="https://github.com/SpaceTimee/Console-HostChecker">Console HostChecker</a>: Cealing Host 自动化检查脚本</li>
+<li><a href="https://github.com/SpaceTimee/Console-HostGenerator">Console HostGenerator</a>: Cealing Host 自动化生成脚本</li>
+</ol>
+<h2>许可证</h2>
+<p><a href="https://app.fossa.com/projects/git%2Bgithub.com%2FSpaceTimee%2FSheas-Cealer?ref=badge_large" rel="nofollow"><img src="https://camo.githubusercontent.com/575d8e3201d13f3c1797d511bd9e44cc7f84ab8d192cf58e7a403fb2115303d3/68747470733a2f2f6170702e666f7373612e636f6d2f6170692f70726f6a656374732f6769742532426769746875622e636f6d253246537061636554696d656525324653686561732d4365616c65722e7376673f747970653d6c61726765" alt="FOSSA Status" data-canonical-src="https://app.fossa.com/api/projects/git%2Bgithub.com%2FSpaceTimee%2FSheas-Cealer.svg?type=large" style="max-width: 100%;"></a></p>
+<p>•ᴗ•</p></div>
+<div style="font-size:small;margin-top:8px;float:right;">ヾ(≧▽≦*)o 转载请注明出处——哈雷0V0 </div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://halei0v0.github.io">哈雷0V0的博客</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if("02/05/2025"!=""){
+    var startSite=new Date("02/05/2025");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","halei0v0/halei0v0.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>
+
+</html>
