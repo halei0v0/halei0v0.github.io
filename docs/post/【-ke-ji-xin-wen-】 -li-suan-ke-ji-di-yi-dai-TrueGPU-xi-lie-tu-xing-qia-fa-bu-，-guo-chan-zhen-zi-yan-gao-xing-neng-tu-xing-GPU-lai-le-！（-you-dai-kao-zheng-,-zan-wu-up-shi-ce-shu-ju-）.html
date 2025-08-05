@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/119430179?v=4"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="# 前言
+>7月26日，“砥砺算芯 超越极限”砺算科技产品发布会在上海召开。">
+<meta property="og:title" content="【科技新闻】 砺算科技第一代TrueGPU系列图形卡发布，国产真自研高性能图形GPU来了！（有待考证,暂无up实测数据）">
+<meta property="og:description" content="# 前言
+>7月26日，“砥砺算芯 超越极限”砺算科技产品发布会在上海召开。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://halei0v0.github.io/post/%E3%80%90-ke-ji-xin-wen-%E3%80%91%20-li-suan-ke-ji-di-yi-dai-TrueGPU-xi-lie-tu-xing-qia-fa-bu-%EF%BC%8C-guo-chan-zhen-zi-yan-gao-xing-neng-tu-xing-GPU-lai-le-%EF%BC%81%EF%BC%88-you-dai-kao-zheng-%2C-zan-wu-up-shi-ce-shu-ju-%EF%BC%89.html">
+<meta property="og:image" content="https://avatars.githubusercontent.com/u/119430179?v=4">
+<title>【科技新闻】 砺算科技第一代TrueGPU系列图形卡发布，国产真自研高性能图形GPU来了！（有待考证,暂无up实测数据）</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">【科技新闻】 砺算科技第一代TrueGPU系列图形卡发布，国产真自研高性能图形GPU来了！（有待考证,暂无up实测数据）</h1>
+<div class="title-right">
+    <a href="https://halei0v0.github.io" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/halei0v0/halei0v0.github.io/issues/26" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h1>前言</h1>
+<blockquote>
+<p>7月26日，“砥砺算芯 超越极限”砺算科技产品发布会在上海召开。<br>
+砺算首款GPU芯片“7G100”系列和首款显卡产品Lisuan eXtreme系列终于和大家见面。<br>
+作为一款全自研高性能图形GPU，砺算7G100系列秉持创新融合，从指令集到计算核心完全由自主设计，基于自研TrueGPU天图架构，并自研指令集、自研软件栈。<br>
+砺算7G100系列GPU以效率、平衡、拓展为重，多重性能优势达到国际主流、国内领先水平。<br>
+比如在效率表现上，砺算7G100系列最多可同时运行48个没有依赖的任务，无需等待，能够最大化GPU使用效率，实现“智能多任务处理”。<br>
+通过打破三角形渲染的顺序限制，在不依赖顺序的场景下提升50%渲染效率，实现“智能乱序渲染”。<br>
+支持FP32或INT32的指令双发射，实现“硬件级智能分配”。<br>
+在矩阵内存布局优化层面，砺算7G100系列GPU将矩阵数据以方块形式存储，更贴近实际使用模式，优化40%显存使用效率。<br>
+还有在平衡性上，聚焦GPU负载平衡，砺算7G100系列GPU能通过硬件自动检测与任务智能分配系统，将巨量的3D渲染和通用计算任务划分为更小的子任务，依据当前硬件负载情况动态分配给计算单元，实时平衡负载。<br>
+聚焦GPU处理器资源平衡，砺算GPU能够通过TEX/UAV指令任务动态均衡系统，自动监控并调整任务分配，智能优化数据流，消除因应用程序偏好而导致的资源不均衡。<br>
+以及围绕拓展性，砺算GPU支持NRSS动态优化渲染画质，实现对英伟达DLSS技术和AMD FSR技术的对标。<br>
+7G100还支持SRIOV技术，最多支持16路虚拟GPU，能够为云端应用部署提供更多可能性。<br>
+强大性能下，搭载7G100系列GPU的Lisuan eXtreme系列显卡取得了良好的实测成绩。<br>
+不论是以FireStrike、Steel Nomad为代表的Benchmark跑分成绩，还是在《黑神话 悟空》、《古墓丽影 暗影》等大型游戏上，亦或者是在渲染软件Blender、视频编辑软件剪映等专业应用上，Lisuan eXtreme系列显卡均游刃有余。<br>
+据实测数据，Lisuan eXtreme系列显卡FireStrike跑分达26800，Steel Nomad跑分达2268，《黑神话 悟空》平均FPS＞70（分辨率：1080P 画质：高）。<br>
+最新测试显示，7月24日正式上线的国产第二款3A大作《明末：渊虚之羽》同样能流畅运行，体现出砺算显卡性能表现、软件兼容性兼具的优势。<br>
+与此同时，在当下热门的大模型应用上，Lisuan eXtreme系列显卡可以完全满足个人AIPC对DeepSeek和文生图等模型的需求。<br>
+目光着眼于未来，Lisuan eXtreme系列显卡除了聚焦PC游戏、专业应用、AIPC，还会在云游戏、云渲染、数字孪生、虚拟/增强现实、智能座舱、具身机器人等领域广泛应用。<br>
+目前，Lisuan eXtreme系列显卡包含专业版和消费级两大类，预计产品送样时间为2025年8月，启动量产时间为2025年9月，敬请期待。<br>
+下一阶段，在游戏、专业视觉渲染、数字孪生、工业设计与仿真等领域，砺算GPU将持续释放技术能力，打造自研、可控的高性能图形产品，坚持软硬件生态构建并行。<br>
+——以上内容摘自<a href="https://www.lisuantech.com/sys-nd/72.html" rel="nofollow">砺算科技官网</a></p>
+</blockquote>
+<h1>看法</h1>
+<p><strong>我是挺支持国产显卡发展的，十分期待这张卡的表现，但毕竟还没有提到兼容性问题，没有Up的实测数据，性能介绍仅供参考，请以实际性能为准</strong></p>
+<h2>砺算7G100问世：国产GPU破局之路的里程碑与挑战</h2>
+<p>在英伟达与AMD主导全球GPU市场的技术格局下，砺算科技7G100系列芯片的发布不啻为一记惊雷。这款全自研GPU从指令集到软件栈的完整自主可控，标志着中国在高端图形处理器领域迈出了实质性一步。其技术亮点直指行业痛点：</p>
+<ul>
+<li><strong>效率革命：</strong> 48任务并行处理、50%渲染效率提升的“智能乱序渲染”、40%显存优化的矩阵存储技术，突破传统顺序限制；</li>
+<li><strong>动态平衡：</strong> 硬件级负载均衡与资源调度系统，有效应对复杂计算场景；</li>
+<li><strong>生态兼容：</strong> 对标DLSS/FSR的NRSS技术、16路vGPU支持、实测流畅运行《黑神话》《明末》及大模型应用，展现强大兼容性。</li>
+</ul>
+<p><strong>国产破局的战略价值远超产品本身：</strong></p>
+<ul>
+<li><strong>技术自主里程碑：</strong> TrueGPU架构证明中国具备高端GPU全链路研发能力，打破“卡脖子”困局；</li>
+<li><strong>AI与数字经济的基石：</strong> 为AIPC、云游戏、数字孪生、智能驾驶等前沿领域提供本土算力支撑；</li>
+<li><strong>产业生态催化器：</strong> 刺激国内软硬件协同创新，推动游戏引擎、工业软件等生态环节发展。</li>
+</ul>
+<p><strong>然而，登顶之路仍荆棘密布：</strong></p>
+<ul>
+<li><strong>生态壁垒：</strong> CUDA生态的护城河极深，开发者迁移成本高昂，需打造差异化开发生态；</li>
+<li><strong>持续创新压力：</strong> 国际巨头迭代迅猛，光追、AI单元等领域需加速突破；</li>
+<li><strong>市场信任建设：</strong> 消费级市场对稳定性、驱动优化极为敏感，需长期投入赢得用户口碑。</li>
+</ul>
+<p><strong>未来展望：砺算的发布是起点而非终点。</strong> 中国GPU产业需在三个维度持续发力：</p>
+<ol>
+<li><strong>构建开放生态：</strong> 推动跨平台开发工具链，降低开发者适配门槛；</li>
+<li><strong>深耕垂直场景：</strong> 在云渲染、工业仿真等B端领域建立优势，逐步辐射消费市场；</li>
+<li><strong>产学研协同：</strong> 联合高校攻关前沿架构，储备高端人才。</li>
+</ol>
+<h1>总结</h1>
+<p><strong>摩尔线程、砺算科技等等国产显卡厂商如同一颗颗火种，在算力为王的时代点燃了国产GPU自主创新的希望。前路虽艰，但“驱动万物”的愿景，正从这片东方算力土壤中破土而出——中国芯的图形篇章，已写下不容忽视的开篇。</strong></p></div>
+<div style="font-size:small;margin-top:8px;float:right;">ヾ(≧▽≦*)o 转载请注明出处——哈雷0V0 </div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://halei0v0.github.io">哈雷0V0的博客</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if("02/05/2025"!=""){
+    var startSite=new Date("02/05/2025");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","halei0v0/halei0v0.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>
+
+</html>
