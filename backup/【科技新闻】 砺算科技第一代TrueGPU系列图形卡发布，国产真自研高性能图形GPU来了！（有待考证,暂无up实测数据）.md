@@ -26,6 +26,34 @@
 
 # 看法
 **我是挺支持国产显卡发展的，十分期待这张卡的表现，但毕竟还没有提到兼容性问题，没有Up的实测数据，性能介绍仅供参考，请以实际性能为准**
+
+消费级显卡7G106 产品规格
+CONSUMER-GPU SPECS
+GPU芯片——7G106
+显存容量——12GB
+显存规格——GDDR6
+系统接口——PCIe 4.0 X 16
+显示接口——4x DisplayPort 1.4a
+显示分辨率——8K60Hz HDR FreeSync，支持DSC
+视频解码——最大 HEVC 8K@60fps 
+视频编码——最大 HEVC 8K@30fps 
+API支持——DirectX 12 / Vulkan 1.3 / OpenGL 4.6 / OpenCL 3.0
+![Image](https://28624713.s21i.faiusr.com/4/ABUIABAEGAAgh5imxAYojNOb_wcw0gY4sAk!700x700.png.webp) 
+
+专业级显卡7G105  产品规格
+PROFESSIONAL-GPU SPECS
+GPU芯片——7G105
+显存规格——24GB GDDR6 with ECC support
+像素填充率——最大 192GP/s
+纹理填充率——最大 384GT/s
+FP32——最大 24 TFLOPS
+系统接口——PCle 4.0x16
+视频解码——16x1080P@60fps
+视频编码——8x1080P@60fps
+虚拟GPU——16路虚拟化
+数据安全——机密计算保护，数据加密，安全显示
+![Image](https://28624713.s21i.faiusr.com/4/ABUIABAEGAAg15WmxAYogO-WuQMw0gY4sAk!700x700.png.webp) 
+
 >据砺算科技官方实测数据，Lisuan eXtreme系列显卡FireStrike跑分达26800，Steel Nomad跑分达2268，《黑神话 悟空》平均FPS＞70（分辨率：1080P 画质：高）。
 ![Image](https://28624713.s21i.faiusr.com/2/ABUIABACGAAgmL7AxAYoxqK7rwMwuAg40AU.jpg)
     最新测试显示，7月24日正式上线的国产第二款3A大作《明末：渊虚之羽》同样能流畅运行，体现出砺算显卡性能表现、软件兼容性兼具的优势。
