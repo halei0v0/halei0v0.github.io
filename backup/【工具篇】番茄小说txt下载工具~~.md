@@ -11,6 +11,4 @@
 **下载链接：**
 [GitHub：](https://github.com/POf-L/Fanqie-novel-Downloader)https://github.com/POf-L/Fanqie-novel-Downloader
 # 注意！
-
-**问题说明：**
-* 不知道为什么up这里下载小说并不能完全下载，只能下载前面100多章，差着很多。
+目前经过UP与作者联系，作者一天内已经极速解决API验证问题~~可正常完整下载！！
