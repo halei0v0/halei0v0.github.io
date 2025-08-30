@@ -230,7 +230,8 @@ hexo new 文章标题
 
 > Typora官网：https://www.typoraio.cn/（89元终身使用，推荐正版）
 >
-> 破解版奉上：[蓝奏云文件](https://kevinwu06.lanzout.com/iXkq30icv1ha)
+> 破解版奉上：[蓝奏云文件【1.3.6版本】](https://kevinwu06.lanzout.com/iXkq30icv1ha)
+                         [其他网盘【1.10.8版本】](https://www.rjctx.com/70804.html)
 
 然后我们用Typora软件打开该.md文件就可以开始写文章了
 
