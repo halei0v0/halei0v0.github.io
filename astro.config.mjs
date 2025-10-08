@@ -30,7 +30,7 @@ import { defineConfig } from 'astro/config'
 
 export default defineConfig({
   site: 'https://halei0v0.github.io/Mizuki',
-  base: 'my-repo',
+  base: 'Mizuki',
 	trailingSlash: "always",
 	integrations: [
 		tailwind({
