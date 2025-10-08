@@ -26,10 +26,11 @@ import { remarkExcerpt } from "./src/plugins/remark-excerpt.js";
 import { remarkMermaid } from "./src/plugins/remark-mermaid.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
 // https://astro.build/config
-export default defineConfig({
-	site: "https://mizuki.mysqil.com/",
+import { defineConfig } from 'astro/config'
 
-	base: "/",
+export default defineConfig({
+  site: 'https://halei0v0.github.io/Mizuki',
+  base: 'my-repo',
 	trailingSlash: "always",
 	integrations: [
 		tailwind({
