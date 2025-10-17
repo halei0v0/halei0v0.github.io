@@ -59,6 +59,19 @@ export const siteConfig: SiteConfig = {
 				"/assets/desktop-banner/cs3.png",
 				"/assets/desktop-banner/cs4.png",
 				"/assets/desktop-banner/cs5.png",
+				"/images/albums/guide/15680526683050304.png",
+				"/images/albums/guide/17000254550822272.png",
+				"/images/albums/guide/17000273027059072.png",
+				"/images/albums/guide/17187156159286656.png",
+				"/images/albums/guide/17202184696024448.png",
+				"/images/albums/guide/17712013064916352.png",
+				"/images/albums/guide/17717780106694016.png",
+				"/images/albums/guide/17730986717597056.png",
+				"/images/albums/guide/17776704463031680.png",
+
+
+
+
 			], // 桌面横幅图片
 			mobile: [
 				"/assets/mobile-banner/m1.webp",
@@ -150,14 +163,23 @@ export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	enable: true, // 启用全屏壁纸功能,非Banner模式下生效
 	src: {
 		desktop: [
-			"/assets/desktop-banner/d1.webp",
-			"/assets/desktop-banner/d2.webp",
-			"/assets/desktop-banner/d3.webp",
-			"/assets/desktop-banner/d4.webp",
-			"/assets/desktop-banner/d5.webp",
-			"/assets/desktop-banner/d6.webp",
-			"/assets/desktop-banner/d7.webp",
-			"/assets/desktop-banner/d8.webp",
+			// "/assets/desktop-banner/d1.webp",
+			// "/assets/desktop-banner/d2.webp",
+			// "/assets/desktop-banner/d3.webp",
+			// "/assets/desktop-banner/d4.webp",
+			// "/assets/desktop-banner/d5.webp",
+			// "/assets/desktop-banner/d6.webp",
+			// "/assets/desktop-banner/d7.webp",
+			// "/assets/desktop-banner/d8.webp",
+			"/images/albums/guide/15680526683050304.png",
+			"/images/albums/guide/17000254550822272.png",
+			"/images/albums/guide/17000273027059072.png",
+			"/images/albums/guide/17187156159286656.png",
+			"/images/albums/guide/17202184696024448.png",
+			"/images/albums/guide/17712013064916352.png",
+			"/images/albums/guide/17717780106694016.png",
+			"/images/albums/guide/17730986717597056.png",
+			"/images/albums/guide/17776704463031680.png",
 		], // 桌面横幅图片
 		mobile: [
 			"/assets/mobile-banner/m1.webp",
