@@ -31,7 +31,7 @@ Discord频道(面向全世界的Mizuki用户): https://discord.gg/MqW6TcQtVM
 
 Mizuki 项目入门指南由哈雷0V0制作。
 
-::github{repo="halei0v0/my-repo"}
+::github{repo="halei0v0/halei0v0.github.io"}
 
 > [!NOTE]
 >

@@ -1,6 +1,6 @@
 # About This Site
 
-::github{repo="halei0v0/my-repo"}
+::github{repo="halei0v0/halei0v0.github.io"}
 
 ## 🌟 主题特色
 
