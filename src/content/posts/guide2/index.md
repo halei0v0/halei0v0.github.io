@@ -33,7 +33,7 @@ Mizuki 项目入门指南由哈雷0V0制作。
 
 ::github{repo="halei0v0/my-repo"}
 
-> [!note]
+> [!NOTE]
 >
 > 本教程目前只讲解Mizuki的Github Pages部署和一些基本的设置和Markdwn语法教程。
 
@@ -176,13 +176,15 @@ export default defineConfig({
   pnpm dev
   ```
 
-* > ![note]
+* > [!NOTE]
   >
   > 这里项目运行会有报错，请通过VS Code搜索项目中报错句段路径，在调取的路径前添加
   >
   > `/项目名称`我这里是`/Mizuki`
   >
   > 全部更改完成即无报错显示
+  >
+  > 【不熟悉请不要更改此选项！！默认`'/'`即可】
 
 ## 上传代码
 
