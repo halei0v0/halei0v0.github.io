@@ -2,7 +2,7 @@
 title: Mizuki博客搭建教程~
 published: 2025-10-14
 description: Mizuki博客搭建的教程，详情参照官方文档：https://docs.mizuki.mysqil.com
-tags: [教程, 通知]
+tags: [教程]
 image: "./cover.png"
 category: 教程
 draft: false
@@ -176,17 +176,15 @@ export default defineConfig({
   pnpm dev
   ```
 
-* > [!NOTE]
+  > [!NOTE]
   >
-  > 这里项目运行会有报错，请通过VS Code搜索项目中报错句段路径，在调取的路径前添加
-  >
-  > `/项目名称`我这里是`/Mizuki`
+  > 这里项目运行会有报错，请通过VS Code搜索项目中报错句段路径，在调取的路径前添加`/项目名称`我这里是`/Mizuki`
   >
   > 全部更改完成即无报错显示
   >
   > 【不熟悉请不要更改此选项！！默认`'/'`即可】
-
-## 上传代码
+  >
+  > ## 上传代码
 
 1.在 GitHub 上，跳转到存储库的 Settings 选项卡并找到设置的 Pages 部分。
 
