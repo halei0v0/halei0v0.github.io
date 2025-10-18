@@ -1,99 +1,36 @@
 ---
 title: 新的开始！
 published: 2025-10-11
-description: 这是一篇博客搭建的基本语法教程。
+description: 这是一篇博客搭建的水文【主要来自模板，为了展示博客的成功~】。
 tags: [教程, 通知]
 image: "./cover.png"
 category: 教程
 draft: false
 ---
 
-# [Frontmatter字段详解](https://docs.mizuki.mysqil.com/press/file/#frontmatter字段详解)
+# 官方教程整合
 
-frontmatter支持的字段包括：
+# 1.Video
 
-### [必需字段](https://docs.mizuki.mysqil.com/press/file/#必需字段)
+Just copy the embed code from YouTube or other platforms, and paste it in the markdown file.
 
-- `title`：文章标题（必需）
-- `description`：文章描述（必需）
+```yaml
+---
+title: Include Video in the Post
+published: 2023-10-19
+// ...
+---
 
-### [发布相关](https://docs.mizuki.mysqil.com/press/file/#发布相关)
+<iframe width="100%" height="468" src="https://www.youtube.com/embed/5gIf0_xpFPI?si=N1WTorLKL0uwLsU_" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+```
 
-- `published`：文章发布日期，格式为YYYY-MM-DD
-- `pubDate`：文章发布日期（与published类似）
-- `date`：文章创建日期
-- `draft`：是否为草稿，true表示草稿，false表示正式发布
+## YouTube
 
-### [内容分类](https://docs.mizuki.mysqil.com/press/file/#内容分类)
+<iframe width="100%" height="468" src="https://www.youtube.com/embed/5gIf0_xpFPI?si=N1WTorLKL0uwLsU_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-- `tags`：文章标签数组，用于标记文章主题
-- `category`：文章分类，用于组织文章
-- `pinned`：是否置顶文章，true表示置顶
+## Bilibili
 
-### [作者信息](https://docs.mizuki.mysqil.com/press/file/#作者信息)
-
-- `author`：文章作者姓名
-- `licenseName`：文章许可证名称，如"MIT"、"CC BY 4.0"等
-- `sourceLink`：文章源链接，通常指向GitHub仓库或原始来源
-
-### [图片设置](https://docs.mizuki.mysqil.com/press/file/#图片设置)
-
-- ```
-  image
-  ```
-
-  ：文章封面图片(单文件方案会导致RSS无法正常构建图片的路径,如果你需要使用rss功能请使用文件夹写作方案)
-
-  - `url`：图片URL地址
-  - `alt`：图片替代文本
-
-1. 在frontmatter下方编写文章内容，可以使用标准的Markdown语法。
-
-   # 实例
-
-   ```
-   ---
-   title: Markdown Tutorial
-   published: 2025-01-20
-   pinned: true
-   description: A simple example of a Markdown blog post.
-   tags: [Markdown, Blogging]
-   category: Examples
-   licenseName: "Unlicensed"
-   author: emn178
-   sourceLink: "https://github.com/emn178/markdown"
-   draft: false
-   date: 2025-01-20
-   image:
-     url: 'https://example.com/image.jpg'
-     alt: '图片描述'
-   pubDate: 2025-01-20
-   ---
-   ```
-
-   # 教程整合
-   
-   # 1.Video
-   
-   Just copy the embed code from YouTube or other platforms, and paste it in the markdown file.
-   
-   ```yaml
-   ---
-   title: Include Video in the Post
-   published: 2023-10-19
-   // ...
-   ---
-   
-   <iframe width="100%" height="468" src="https://www.youtube.com/embed/5gIf0_xpFPI?si=N1WTorLKL0uwLsU_" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-   ```
-   
-   ## YouTube
-   
-   <iframe width="100%" height="468" src="https://www.youtube.com/embed/5gIf0_xpFPI?si=N1WTorLKL0uwLsU_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-   
-   ## Bilibili
-   
-   <iframe width="100%" height="468" src="//player.bilibili.com/player.html?bvid=BV1fK4y1s7Qf&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" &autoplay=0> </iframe>
+<iframe width="100%" height="468" src="//player.bilibili.com/player.html?bvid=BV1fK4y1s7Qf&p=1&autoplay=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" &autoplay=0> </iframe>
 
 # 2.Markdown Tutorial
 
