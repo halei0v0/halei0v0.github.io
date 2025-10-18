@@ -1449,3 +1449,17 @@ password: 'your-secret-password'
 ```
 
 这样定义后就可以实现为文章设定不可逆的文章加密，只有输入正确的密码才能查看文章内容。
+
+
+
+
+
+
+
+```plaintext
+src/content/posts/
+├── post-1.md                # 文章文件（封面图使用网络图片或public目录图片）
+└── post-2/                  # 包含文章和封面图的子目录
+    ├── cover.png            # 封面图（相对路径：./cover.png）
+    └── index.md             # 文章内容
+```
