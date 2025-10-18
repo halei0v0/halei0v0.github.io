@@ -56,8 +56,8 @@ export const siteConfig: SiteConfig = {
 				//"/assets/desktop-banner/d8.webp",
 				"/assets/desktop-banner/cs1.png",
 				"/assets/desktop-banner/cs2.png",
-				"/assets/desktop-banner/cs3.png",
-				"/assets/desktop-banner/cs4.png",
+				//"/assets/desktop-banner/cs3.png",
+				//"/assets/desktop-banner/cs4.png",
 				"/assets/desktop-banner/cs5.png",
 				"/images/albums/guide/15680526683050304.png",
 				"/images/albums/guide/17000254550822272.png",
@@ -84,6 +84,16 @@ export const siteConfig: SiteConfig = {
 				"/assets/mobile-banner/m8.webp",
 				"/assets/desktop-banner/cs1.png",
 				"/assets/desktop-banner/cs2.png",
+				"/images/albums/guide/15680526683050304.png",
+				"/images/albums/guide/17000254550822272.png",
+				"/images/albums/guide/17000273027059072.png",
+				"/images/albums/guide/17187156159286656.png",
+				"/images/albums/guide/17202184696024448.png",
+				"/images/albums/guide/17712013064916352.png",
+				"/images/albums/guide/17717780106694016.png",
+				"/images/albums/guide/17730986717597056.png",
+				"/images/albums/guide/17776704463031680.png",
+
 			], // 移动横幅图片
 		}, // 使用本地横幅图片
 
