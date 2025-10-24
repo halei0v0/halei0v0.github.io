@@ -256,6 +256,10 @@ export type SakuraConfig = {
 		min: number; // 樱花最小尺寸倍数
 		max: number; // 樱花最大尺寸倍数
 	};
+	opacity: {
+		min: number; // 樱花最小不透明度
+		max: number; // 樱花最大不透明度
+	};
 	speed: {
 		horizontal: {
 			min: number; // 水平移动速度最小值
@@ -266,16 +270,20 @@ export type SakuraConfig = {
 			max: number; // 垂直移动速度最大值
 		};
 		rotation: number; // 旋转速度
+		fadeSpeed: number; // 消失速度
 	};
 	zIndex: number; // 层级，确保樱花在合适的层级显示
 };
 
 export type FullscreenWallpaperConfig = {
 	enable: boolean; // 是否启用全屏壁纸功能
-	src: {
-		desktop?: string | string[]; // 桌面端壁纸图片
-		mobile?: string | string[]; // 移动端壁纸图片
-	};
+	src:
+		| string
+		| string[]
+		| {
+				desktop?: string | string[];
+				mobile?: string | string[];
+		  }; // 支持单个图片、图片数组或分别设置桌面端和移动端图片
 	position?: "top" | "center" | "bottom"; // 壁纸位置，等同于 object-position
 	carousel?: {
 		enable: boolean; // 是否启用轮播
