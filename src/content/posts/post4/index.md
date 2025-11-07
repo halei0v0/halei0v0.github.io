@@ -8,7 +8,7 @@ category: 工具分享
 draft: false
 ---
 
-### 软件介绍
+# 软件介绍
 
 github加速神器，解决github打不开、用户头像无法加载、releases无法上传下载、git-clone、git-pull、git-push失败等问题。
 
@@ -82,3 +82,12 @@ FastGithub为每台不同的主机生成自颁发CA证书，保存在cacert文�
 
 
 
+# 注意事项
+
+:::note
+
+此软件无法正常登录Cloud flare！
+
+请不要在使用此软件时登录Cloud flare！
+
+:::
