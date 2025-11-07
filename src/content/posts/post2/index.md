@@ -22,11 +22,17 @@ draft: false
 
 # 备份
 
-永久无限订阅1
+永久无限订阅1，此订阅链接被墙，暂无法订阅
 https://5f236t3.flownets.xyz/s/3fbf8d32b490dc9d160c7a1b3c583c0c
 
-永久无限订阅2
+永久无限订阅2，此订阅链接被墙，暂无法订阅
 https://shb.tyreo.cn/api/v1/client/subscribe?token=0b04a6288fdc7513c8d5b1295e971fb8
+
+永久无限订阅3，此订阅链接被墙，需要挂节点更新
+https://shb.tyreo.cn/max/ng?token=0b04a6288fdc7513c8d5b1295e971fb8
+
+永久无限订阅4，可正常使用
+https://sub.lbw666.ggff.net/sub?token=561a83eccfb35b1e15398c22a94456be
 
 # 软件下载
 
