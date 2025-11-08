@@ -550,7 +550,149 @@ export const navBarConfig: NavBarConfig = {
 };
 ```
 
-## 4.0其他：文章客户端加密
+## 4.0自定义字体配置
+
+本教程将指导您如何在 Mizuki 主题中添加和配置自定义字体。
+
+### 4.1准备工作
+
+在开始之前，请确保您已经：
+
+- 准备好要添加的字体文件（支持 `.ttf`、`.woff`、`.woff2` 等格式）
+- 了解字体的名称和基本信息
+- 具备基本的文件编辑能力
+
+### 4.2添加字体文件
+
+1. 将您的字体文件复制到项目的字体目录：
+
+```
+public/assets/font/
+```
+
+2. 确保字体文件名称清晰易懂，例如：
+   - `MyCustomFont.ttf`
+   - `SpecialFont-Bold.woff2`
+
+### 4.3配置字体定义
+
+1. 在CSS中定义字体
+
+打开 `src/styles/main.css` 文件，在现有的 `@font-face` 定义后添加您的字体：
+
+```css
+/* 导入您的自定义字体 */
+@font-face {
+    font-family: 'YourFontName';
+    src: url('/assets/font/YourFontFile.ttf') format('truetype');
+    font-weight: normal;
+    font-display: swap;
+}
+```
+
+**参数说明：**
+
+- `font-family`: 字体的名称，用于在 CSS 中引用
+- `src`: 字体文件的路径
+- `font-weight`: 字体粗细（normal、bold、100-900）
+- `font-display`: 字体加载策略，建议使用 `swap`
+
+2. 创建字体应用类
+
+在同一文件中，添加字体应用类：
+
+```css
+/* 当启用您的自定义字体时应用为全局字体 */
+.your-font-enabled {
+    font-family: 'YourFontName', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+```
+
+:::note
+
+**注意：** 类名建议使用小写字母和连字符，例如 `custom-font-enabled`。
+
+:::
+
+3. 更新配置文件
+
+修改主配置文件
+
+打开 `src/config.ts` 文件，在 `font` 配置部分添加您的字体选项：
+
+```typescript
+// 字体配置
+font: {
+    zenMaruGothic: {
+        enable: true, // 启用全局圆体
+    },
+    yourCustomFont: {
+        enable: false, // 启用您的自定义字体
+    },
+},
+```
+
+**配置说明：**
+
+- 键名应该使用驼峰命名法
+- `enable` 属性控制字体是否启用
+- 可以同时启用多个字体
+
+4. 更新类型定义
+
+```typescript
+font: {
+    zenMaruGothic: {
+        enable: boolean; // 启用全局圆体
+    };
+    yourCustomFont: {
+        enable: boolean; // 启用您的自定义字体
+    };
+};
+```
+
+5.  应用字体到布局
+
+打开 `src/layouts/Layout.astro` 文件，找到 `<body>` 标签，在 `class:list` 中添加您的字体类：
+
+```astro
+<body class="min-h-screen" class:list={[
+    {
+        "lg:is-home": isHomePage, 
+        "enable-banner": enableBanner,
+        "zen-maru-gothic-enabled": siteConfig.font.zenMaruGothic.enable,
+        "your-font-enabled": siteConfig.font.yourCustomFont.enable
+    }
+]}
+    data-overlayscrollbars-initialize
+>
+```
+
+6. 测试和使用
+
+**应用字体**：在 `src/config.ts` 中将您的字体的 `enable` 设置为 `true`
+
+**重启开发服务器**：
+
+```bash
+npm run dev
+```
+
+**检查效果**：打开浏览器查看字体是否正确应用
+
+
+
+
+
+## 5.0其他：文章客户端加密
+
+:::note
+
+博客特色配置说明请前往[Mizuki博客使用技巧 - 哈雷0V0的博客](https://v-blog.halei0v0.top/posts/guide3/)
+
+【[更多参照](https://docs.mizuki.mysqil.com/config/other-config/)、[Umami访问量统计配置说明 ](https://docs.mizuki.mysqil.com/config/umami-config/#许可证配置)】
+
+:::
 
 ### 概述
 

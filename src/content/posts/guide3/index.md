@@ -67,3 +67,17 @@ Negative potential consequences of an action.
 :::caution
 Negative potential consequences of an action.
 :::
+
+# 二.特色功能
+
+1. [自定义页面 ](https://docs.mizuki.mysqil.com/special/about/)
+
+2. [日记页面 ](https://docs.mizuki.mysqil.com/special/diary/)
+
+3. [友链页面](https://docs.mizuki.mysqil.com/special/friends/)
+
+4. [番剧页面 ](https://docs.mizuki.mysqil.com/special/anime/)
+
+5. [相册页面 ](https://docs.mizuki.mysqil.com/special/gallery/)
+
+6. [其他页面 ](https://docs.mizuki.mysqil.com/special/other/)
