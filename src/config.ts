@@ -322,7 +322,7 @@ export const expressiveCodeConfig: ExpressiveCodeConfig = {
 export const commentConfig: CommentConfig = {
 	enable: true, // 启用评论功能。当设置为 false 时，评论组件将不会显示在文章区域。
 	twikoo: {
-		envId: "https://twikoo-alpha-umber.vercel.app",
+		envId: "https://tool.v-blog.halei0v0.top",//请不要用我的环境ID！因为是免费的个人额度有限，你可以自行注册。
 		lang: "zh_CN", // 设置 Twikoo 评论系统语言为英文
 	},
 };
