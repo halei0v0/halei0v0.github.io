@@ -222,7 +222,7 @@ draft: false
 >
 >站点配置位于 `src/config.ts` 文件中的 `siteConfig` 对象，控制博客的基本信息和全局设置。
 
-### 3.1.0配置详解
+#### 配置详解
 
 #### 3.1.1基本信息
 
@@ -448,7 +448,7 @@ export const footerConfig: FooterConfig = {
 
 个人资料配置位于 `src/config.ts` 文件中的 `profileConfig` 对象，控制网站侧边栏中的个人信息显示。
 
-### 配置项详解
+#### 配置项详解
 
 ```
 export const profileConfig: ProfileConfig = {
@@ -550,11 +550,11 @@ export const navBarConfig: NavBarConfig = {
 };
 ```
 
-## 4.0自定义字体配置
+# 4.自定义字体配置
 
 本教程将指导您如何在 Mizuki 主题中添加和配置自定义字体。
 
-### 4.1准备工作
+#### 4.1准备工作
 
 在开始之前，请确保您已经：
 
@@ -562,7 +562,7 @@ export const navBarConfig: NavBarConfig = {
 - 了解字体的名称和基本信息
 - 具备基本的文件编辑能力
 
-### 4.2添加字体文件
+#### 4.2添加字体文件
 
 1. 将您的字体文件复制到项目的字体目录：
 
@@ -574,7 +574,7 @@ public/assets/font/
    - `MyCustomFont.ttf`
    - `SpecialFont-Bold.woff2`
 
-### 4.3配置字体定义
+#### 4.3配置字体定义
 
 1. 在CSS中定义字体
 
@@ -680,11 +680,7 @@ npm run dev
 
 **检查效果**：打开浏览器查看字体是否正确应用
 
-
-
-
-
-## 5.0其他：文章客户端加密
+# 5.其他：文章客户端加密
 
 :::note
 
