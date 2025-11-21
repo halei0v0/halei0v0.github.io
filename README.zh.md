@@ -22,37 +22,6 @@
 
 一个现代化、功能丰富的静态博客模板，基于 [Astro](https://astro.build) 构建，具有先进的功能和精美的设计。
 
-[**🖥️ 在线演示**](https://mizuki.mysqil.com/)
-[**📝 用户文档**](https://docs.mizuki.mysqil.com/)
-
-🌏 README 语言
-[**English**](./README.md) /
-[**中文**](./README.zh.md) /
-[**日本語**](./docs/README.ja.md) /
-[**中文繁体**](./docs/README.tw.md) /
-
-## 🆕 v5.0 版本更新
-- **Pio 看板娘集成**：集成了 Pio 看板娘，提供可爱的互动角色，增强用户互动体验。
-- **高度可配置**：支持在 `src/config.ts` 中进行详细配置，包括模型路径、位置、尺寸、对话内容等，满足个性化需求。
-- **无刷新跳转**：看板娘的返回首页功能现在使用主题自带的 Swup 无刷新跳转，提供更流畅、无缝的页面切换体验。
-
-## 🆕 v4.6 版本更新
-- **番剧页面：** 重构了更可爱好看的番剧页面，包括番剧列表、番剧详情和番剧时间轴。
-- **相册页面：** 重构了相册页面,使用分页+文件夹数据索引方案
-- **全新的动画：** 使用了全新的动画组件，使页面更加流畅和美观
-- **图片API的支持** 支持图片API，可以快速获取图片信息,使用(PicFlow API项目)[https://github.com/matsuzaka-yuki/PicFlow-API]
-
-## 🆕 v3.4 版本更新
-- **新增页面：** 添加了项目展示、技能展示和时间线专属页面，用于展示您的工作、专业技能和成长历程。
-- **下拉菜单修复：** 解决了下拉菜单点击时出现边框轮廓的问题，提升了界面一致性。
-- **搜索功能优化：** 增强了搜索功能的性能和准确性。
-- **底部HTML注入：** 引入了新功能，允许在页面底部注入自定义HTML内容，提供更大的灵活性。
-
-
-## 🆕 v3.3 版本更新
-- **Mermaid 语法支持：** 添加了对 Mermaid 图表语法的支持，现在可以在 Markdown 中直接嵌入流程图、序列图、甘特图等。
-- **Umami 访问统计：** 添加了对 Umami 访问统计的支持，可以轻松集成网站访问数据分析。
-
 ![Configuration](configuration.svg)
 
 ### 🔧 组件配置系统重构
@@ -272,16 +241,6 @@ export const siteConfig: SiteConfig = {
 - **友链页面：** 在 `src/content/spec/friends.md` 中编辑朋友数据
 - **日记页面：** 在 `src/pages/diary.astro` 中编辑动态
 - **关于页面：** 在 `src/content/spec/about.md` 中编辑内容
-
-## ✏️ 贡献
-
-我们欢迎贡献！请随时提交问题和拉取请求。
-
-1. Fork 仓库
-2. 创建功能分支 (`git checkout -b feature/amazing-feature`)
-3. 提交更改 (`git commit -m 'Add some amazing feature'`)
-4. 推送到分支 (`git push origin feature/amazing-feature`)
-5. 打开拉取请求
 
 ## 📄 许可证
 
