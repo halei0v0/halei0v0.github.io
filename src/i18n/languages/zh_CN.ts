@@ -204,8 +204,8 @@ export const zh_CN: Translation = {
 	[Key.timelineTotalExperience]: "总工作经验",
 	[Key.timelineWorkPositions]: "工作岗位数",
 	[Key.timelineCurrentRole]: "当前状态",
-	[Key.timelineEmployed]: "在职",
-	[Key.timelineAvailable]: "可入职",
+	[Key.timelineEmployed]: "高中在读",
+	[Key.timelineAvailable]: "不可入职，高中在读",
 
 	// 密码保护
 	[Key.passwordProtected]: "密码保护",

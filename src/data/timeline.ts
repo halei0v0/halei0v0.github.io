@@ -173,7 +173,7 @@ export const timelineData: TimelineItem[] = [
 	// 	color: "#059669",
 	// },
 	// {
-	// 	id: "high-school-graduation",
+	// 	id: "高中",
 	// 	title: "High School Graduation",
 	// 	description:
 	// 		"Graduated from high school with excellent grades and was admitted to the Computer Science and Technology program at Beijing Institute of Technology.",
@@ -199,12 +199,27 @@ export const timelineData: TimelineItem[] = [
 		startDate: "2023-06-01",
 		skills: ["Computer", "装机"],
 		achievements: [
-			'Completed first "Hello World" program',
-			"Learned basic loops and conditional statements",
-			"Developed interest in programming",
+			'自主装机一次点亮~',
+			"想买个nas玩玩~【没有】",
+			"想玩机架式服务器~~【没有】",
 		],
 		icon: "mdi:trophy",
 		color: "#3a88edff",
+	},
+	{
+		id: "高中",
+		title: "博客搭建",
+		description:
+			"Gmeek博客、Mizuki博客",
+		type: "achievement",
+		startDate: "2025-10-08",
+		skills: ["博客", "代码"],
+		achievements: [
+			'先尝试的Gmeek，不满足',
+			"现在再用Mizuki模板，好看！",
+		],
+		icon: "mdi:trophy",
+		color: "#10ca3eff",
 	},
 	//  事件类型说明
     //  work: 工作经历

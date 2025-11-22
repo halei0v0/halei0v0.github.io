@@ -1,7 +1,7 @@
 ---
-title: 网站测速工具
+title: 域名测速网站
 published: 2025-10-20
-description: 无广告的网络连接测速网站。
+description: 网络连接测速网站。
 tags: [工具]
 category: 工具分享
 draft: false

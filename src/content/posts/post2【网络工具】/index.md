@@ -36,7 +36,11 @@ https://sub.lbw666.ggff.net/sub?token=561a83eccfb35b1e15398c22a94456be
 
 # 软件下载
 
-**Windows**：[clash-verge](https://www.clash-verge.com.cn/)：https://www.clash-verge.com.cn/
+**Windows**：
+
+[clash-verge](https://www.clash-verge.com.cn/)：https://www.clash-verge.com.cn/
+
+[官方Github仓库下载：](https://github.com/clash-verge-rev/clash-verge-rev/releases/)https://github.com/clash-verge-rev/clash-verge-rev/releases/
 
 **Android**：
 

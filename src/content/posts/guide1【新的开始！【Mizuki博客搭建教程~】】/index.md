@@ -743,3 +743,8 @@ src/content/posts/
     ├── cover.png            # 封面图（相对路径：./cover.png）
     └── index.md             # 文章内容
 ```
+
+# 6.软件推荐
+
+[markdown编辑工具（Typora1.3.6）](https://kevinwu06.lanzout.com/iXkq30icv1ha)：https://kevinwu06.lanzout.com/iXkq30icv1ha
+
