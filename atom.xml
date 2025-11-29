@@ -1,0 +1,1461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>哈雷0V0的博客</title>
+  <subtitle>一个神秘的up主，带你打开新的世界!</subtitle>
+  <link href="https://v-blog.halei0v0.top/" rel="alternate" type="text/html"/>
+  <link href="https://v-blog.halei0v0.top/atom.xml" rel="self" type="application/atom+xml"/>
+  <id>https://v-blog.halei0v0.top/</id>
+  <updated>2025-11-29T02:44:28.595Z</updated>
+  <language>zh_CN</language>
+  <entry>
+    <title>Fast Github【Github加速工具】</title>
+    <link href="https://v-blog.halei0v0.top/posts/post4-fast-githubgithub%E5%8A%A0%E9%80%9F%E5%B7%A5%E5%85%B7/" rel="alternate" type="text/html"/>
+    <id>https://v-blog.halei0v0.top/posts/post4-fast-githubgithub%E5%8A%A0%E9%80%9F%E5%B7%A5%E5%85%B7/</id>
+    <published>2025-10-31T00:00:00.000Z</published>
+    <updated>2025-10-31T00:00:00.000Z</updated>
+    <summary>Fast GitHub：加速你的 GitHub 访问体验。</summary>
+    <content type="html"><![CDATA[<h1>软件介绍</h1>
+<p>github加速神器，解决github打不开、用户头像无法加载、releases无法上传下载、git-clone、git-pull、git-push失败等问题。</p>
+<h3>1. 程序下载</h3>
+<p>::github{repo="creazyboyone/FastGithub"}</p>
+<ul>
+<li><a href="https://github.com/creazyboyone/FastGithub">github-release</a></li>
+</ul>
+<h3>2. 部署方式</h3>
+<h4>2.1 windows-x64桌面</h4>
+<ul>
+<li>双击运行FastGithub.UI.exe</li>
+</ul>
+<h4>2.2 windows-x64服务</h4>
+<ul>
+<li><code>fastgithub.exe start</code> // 以windows服务安装并启动</li>
+<li><code>fastgithub.exe stop</code> // 以windows服务卸载并删除</li>
+</ul>
+<h4>2.3 linux-x64终端</h4>
+<ul>
+<li><code>sudo ./fastgithub</code></li>
+<li>设置系统自动代理为<code>http://127.0.0.1:38457</code>，或手动代理http/https为<code>127.0.0.1:38457</code></li>
+</ul>
+<h4>2.4 linux-x64服务</h4>
+<ul>
+<li><code>sudo ./fastgithub start</code> // 以systemd服务安装并启动</li>
+<li><code>sudo ./fastgithub stop</code> // 以systemd服务卸载并删除</li>
+<li>设置系统自动代理为<code>http://127.0.0.1:38457</code>，或手动代理http/https为<code>127.0.0.1:38457</code></li>
+</ul>
+<h4>2.5 macOS-x64</h4>
+<ul>
+<li>双击运行fastgithub</li>
+<li>安装cacert/fastgithub.cer并设置信任</li>
+<li>设置系统自动代理为<code>http://127.0.0.1:38457</code>，或手动代理http/https为<code>127.0.0.1:38457</code></li>
+<li><a href="https://github.com/creazyboyone/FastGithub/blob/master/MacOSXConfig.md">具体配置详情</a></li>
+</ul>
+<h4>2.6 docker-compose一键部署</h4>
+<ul>
+<li>准备好docker 18.09, docker-compose.</li>
+<li>在源码目录下，有一个docker-compose.yaml 文件，专用于在实际项目中，临时使用github.com源码，而做的demo配置。</li>
+<li>根据自己的需要更新docker-compose.yaml中的sample和build镜像即可完成拉github.com源码加速，并基于源码做后续的操作。</li>
+</ul>
+<h3>3. 软件功能</h3>
+<ul>
+<li>提供域名的纯净IP解析；</li>
+<li>提供IP测速并选择最快的IP；</li>
+<li>提供域名的tls连接自定义配置；</li>
+<li>google的CDN资源替换，解决大量国外网站无法加载js和css的问题；</li>
+</ul>
+<h3>4. 证书验证</h3>
+<h4>4.1 git</h4>
+<p>git操作提示<code>SSL certificate problem</code>
+需要关闭git的证书验证：<code>git config --global http.sslverify false</code></p>
+<h4>4.2 firefox</h4>
+<p>firefox提示<code>连接有潜在的安全问题</code>
+设置-&gt;隐私与安全-&gt;证书-&gt;查看证书-&gt;证书颁发机构，导入cacert/fastgithub.cer，勾选“信任由此证书颁发机构来标识网站”</p>
+<h3>5. 安全性说明</h3>
+<p>FastGithub为每台不同的主机生成自颁发CA证书，保存在cacert文件夹下。客户端设备需要安装和无条件信任自颁发的CA证书，请不要将证书私钥泄露给他人，以免造成损失。</p>
+<h3>6. 合法性说明</h3>
+<p>《国际联网暂行规定》第六条规定：“计算机信息网络直接进行国际联网，必须使用邮电部国家公用电信网提供的国际出入口信道。任何单位和个人不得自行建立或者使用其他信道进行国际联网。” FastGithub本地代理使用的都是“公用电信网提供的国际出入口信道”，从国外Github服务器到国内用户电脑上FastGithub程序的流量，使用的是正常流量通道，其间未对流量进行任何额外加密（仅有网页原有的TLS加密，区别于VPN的流量加密），而FastGithub获取到网页数据之后发生的整个代理过程完全在国内，不再适用国际互联网相关之规定。</p>
+<h1>注意事项</h1>
+<p>:::note</p>
+<p>此软件无法正常登录Cloud flare！</p>
+<p>请不要在使用此软件时登录Cloud flare！</p>
+<p>:::</p>
+<h2>什么是 Fast GitHub？</h2>
+<p>Fast GitHub 是一个专为开发者设计的开源工具，旨在解决在中国大陆及其他网络环境不佳地区访问 GitHub 时遇到的<strong>速度慢</strong>、<strong>连接不稳定</strong>、<strong>克隆仓库失败</strong>等问题。通过智能 DNS 解析和流量优化技术，它能够显著提升 GitHub 及相关服务的访问速度。</p>
+<h2>为什么需要 Fast GitHub？</h2>
+<h3>常见的访问问题</h3>
+<ul>
+<li><strong>仓库克隆缓慢</strong>：特别是大型仓库，经常中断</li>
+<li><strong>页面加载时间长</strong>：GitHub 网页界面响应缓慢</li>
+<li><strong>Raw 文件下载失败</strong>：无法正常下载仓库中的原始文件</li>
+<li><strong>API 调用限制</strong>：由于网络问题导致的 API 调用失败</li>
+</ul>
+<h3>传统解决方案的不足</h3>
+<ul>
+<li>VPN/代理配置复杂</li>
+<li>修改 hosts 文件需要手动维护</li>
+<li>某些企业环境禁止使用代理</li>
+</ul>
+<h2>Fast GitHub 的工作原理</h2>
+<h3>核心技术</h3>
+<ol>
+<li><strong>智能 DNS 解析</strong>
+<ul>
+<li>自动检测最优的 GitHub 服务器 IP</li>
+<li>绕过污染 DNS，使用干净的解析结果</li>
+</ul>
+</li>
+<li><strong>本地代理服务</strong>
+<ul>
+<li>在本地建立代理服务器</li>
+<li>对 GitHub 相关流量进行专门优化</li>
+</ul>
+</li>
+<li><strong>流量劫持与重定向</strong>
+<ul>
+<li>透明劫持对 GitHub 域名的请求</li>
+<li>自动重定向到优化路径</li>
+</ul>
+</li>
+</ol>
+<h2>功能特性</h2>
+<h3>🚀 极速体验</h3>
+<ul>
+<li>GitHub 网页加载速度提升 5-10 倍</li>
+<li>仓库克隆速度显著改善</li>
+<li>图片、资源文件加载无延迟</li>
+</ul>
+<h3>🔒 安全可靠</h3>
+<ul>
+<li>开源透明，无后门风险</li>
+<li>不收集用户数据</li>
+<li>仅针对 GitHub 相关域名进行优化</li>
+</ul>
+<h3>⚡ 简单易用</h3>
+<ul>
+<li>一键安装，开箱即用</li>
+<li>自动配置，无需复杂设置</li>
+<li>支持所有主流操作系统</li>
+</ul>
+<h3>🔄 持续更新</h3>
+<ul>
+<li>自动更新最优 IP 列表</li>
+<li>及时适应 GitHub 架构变化</li>
+<li>活跃的社区维护</li>
+</ul>
+<h2>使用注意事项</h2>
+<h3>网络环境适配</h3>
+<ul>
+<li>在企业网络中使用前请获得管理员同意</li>
+<li>某些严格管控的网络环境可能无法使用</li>
+</ul>
+<h3>安全性考虑</h3>
+<ul>
+<li>虽然工具本身安全，但建议从官方渠道下载</li>
+<li>定期更新到最新版本</li>
+</ul>
+<h3>与其他工具的兼容性</h3>
+<ul>
+<li>可能与某些 VPN 冲突</li>
+<li>如遇问题，可暂时停用排查</li>
+</ul>
+<h2>替代方案对比</h2>
+<table>
+<thead>
+<tr>
+<th>工具方案</th>
+<th>易用性</th>
+<th>效果</th>
+<th>安全性</th>
+<th>成本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fast GitHub</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>免费</td>
+</tr>
+<tr>
+<td>修改 hosts</td>
+<td>⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>免费</td>
+</tr>
+<tr>
+<td>商业 VPN</td>
+<td>⭐⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐⭐</td>
+<td>付费</td>
+</tr>
+<tr>
+<td>代理软件</td>
+<td>⭐⭐</td>
+<td>⭐⭐⭐⭐</td>
+<td>⭐⭐</td>
+<td>免费/付费</td>
+</tr>
+</tbody>
+</table>
+<h2>总结</h2>
+<p>Fast GitHub 是解决 GitHub 访问问题的<strong>高效、安全、免费</strong>的解决方案。无论你是学生、开发者还是企业用户，都能从中受益。通过简单的安装配置，即可享受流畅的 GitHub 使用体验，大大提升开发效率。</p>
+<p><strong>立即尝试 Fast GitHub，告别漫长的等待，让代码管理变得更加高效愉悦！</strong></p>
+<hr />
+<p><em>温馨提示：使用任何网络工具时，请遵守当地法律法规和网络使用政策。</em></p>
+]]></content>
+    <author>
+      <name>哈雷0V0</name>
+    </author>
+    <category term="工具分享"></category>
+  </entry>
+  <entry>
+    <title>对Mizuki的一些看法</title>
+    <link href="https://v-blog.halei0v0.top/posts/post3%E5%AF%B9mizuki%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9C%8B%E6%B3%95/" rel="alternate" type="text/html"/>
+    <id>https://v-blog.halei0v0.top/posts/post3%E5%AF%B9mizuki%E7%9A%84%E4%B8%80%E4%BA%9B%E7%9C%8B%E6%B3%95/</id>
+    <published>2025-10-25T00:00:00.000Z</published>
+    <updated>2025-10-25T00:00:00.000Z</updated>
+    <summary>最近构建Mizuki博客的一些想法。</summary>
+    <content type="html"><![CDATA[<h1>前言</h1>
+<blockquote>
+<p>最近修改博客多多少少遇到一些问题但总体上无大碍</p>
+<p>但是为什么Mizuki作者要在我好不容易从5.1更新到5.3的情况下推出6.1pro？？</p>
+<p>很无语好吗啊喂(#`O′)！！</p>
+</blockquote>
+<h1>Mizuki博客6.1pro</h1>
+<ul>
+<li><strong>页面重构</strong>：完全重构动漫、时间线、项目、技能、相册、朋友、日记和关于页面，以获得更好的性能和用户体验。</li>
+<li><strong>页面切换功能</strong>：添加了带有 SEO 优化模块的页面切换功能，允许控制功能页面可见性。</li>
+<li><strong>新的网格布局</strong>：引入了新的网格文章列表布局，以改进内容呈现。</li>
+<li><strong>涟漪管理</strong>：添加了涟漪效应管理模块以增强视觉交互。</li>
+<li><strong>简单图标支持</strong>：添加了对简单图标的支持，可以访问更丰富的图标库以进行界面自定义。</li>
+<li><strong>移动文章列表布局</strong>：推出专为移动设备优化的全新文章列表布局，提高了小屏幕上的可读性和作便利性。</li>
+<li><strong>RSS 和 ATOM</strong>：优化 RSS 和 ATOM 的移动布局。</li>
+</ul>
+<blockquote>
+<p>不过我觉得重构以后的文章列表好像不怎么好看，要更新有空再折腾吧，最近有点累了😔，大家有时间可以去试试~</p>
+</blockquote>
+<p><img src="./show1.jpeg" alt="图片" /></p>
+<h1>Mizuki模板下载地址</h1>
+<p>::github{repo="matsuzaka-yuki/Mizuki"}</p>
+<p>V 6.1:<a href="https://github.com/matsuzaka-yuki/Mizuki/releases/tag/6.0">Release Mizuki v6.1 Pro </a></p>
+<p>:::note</p>
+<p>觉得6.1不好看的可以和我一起用5.3，其他版本多少问题都有点大，(●ˇ∀ˇ●)——踩过坑的我┭┮﹏┭┮</p>
+<p>:::</p>
+]]></content>
+    <author>
+      <name>哈雷0V0</name>
+    </author>
+    <category term="日常"></category>
+  </entry>
+  <entry>
+    <title>域名测速网站</title>
+    <link href="https://v-blog.halei0v0.top/posts/post1%E5%9F%9F%E5%90%8D%E6%B5%8B%E9%80%9F%E7%BD%91%E7%AB%99/" rel="alternate" type="text/html"/>
+    <id>https://v-blog.halei0v0.top/posts/post1%E5%9F%9F%E5%90%8D%E6%B5%8B%E9%80%9F%E7%BD%91%E7%AB%99/</id>
+    <published>2025-10-20T00:00:00.000Z</published>
+    <updated>2025-10-20T00:00:00.000Z</updated>
+    <summary>网络连接测速网站。</summary>
+    <content type="html"><![CDATA[<p>测速工具（节点很多，非常推荐）：https://zhale.me/http/</p>
+<p>:::note</p>
+<p>可见Github Pages国内访问是有多“迅速”竟拿下了<code>34</code>的“高分”</p>
+<p>后续改进吧，毕竟Github Pages是相对来讲不折腾的了【没办法的等一下也就加载出来了；有办法的↑🧱↓】</p>
+<p>O(∩_∩)O毕竟正常看个文章没问题是吧~</p>
+<p>:::</p>
+<p><img src="./halei.jpeg" alt="图片" /></p>
+]]></content>
+    <author>
+      <name>哈雷0V0</name>
+    </author>
+    <category term="工具分享"></category>
+  </entry>
+  <entry>
+    <title>Mizuki博客使用技巧</title>
+    <link href="https://v-blog.halei0v0.top/posts/guide3mizuki%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/" rel="alternate" type="text/html"/>
+    <id>https://v-blog.halei0v0.top/posts/guide3mizuki%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</id>
+    <published>2025-10-19T00:00:00.000Z</published>
+    <updated>2025-10-19T00:00:00.000Z</updated>
+    <summary>关于Mizuki博客的一些文章功能和技巧。</summary>
+    <content type="html"><![CDATA[<h1>一.特殊标签</h1>
+<pre><code>:::note
+Highlights information that users should take into account, even when skimming.
+:::
+</code></pre>
+<p>:::note
+Highlights information that users should take into account, even when skimming.
+:::</p>
+<pre><code>:::tip
+Optional information to help a user be more successful.
+:::
+</code></pre>
+<p>:::tip
+Optional information to help a user be more successful.
+:::</p>
+<pre><code>:::important
+Crucial information necessary for users to succeed.
+:::
+</code></pre>
+<p>:::important
+Crucial information necessary for users to succeed.
+:::</p>
+<pre><code>:::warning
+Critical content demanding immediate user attention due to potential risks.
+:::
+</code></pre>
+<p>:::warning
+Critical content demanding immediate user attention due to potential risks.
+:::</p>
+<pre><code>:::caution
+Negative potential consequences of an action.
+:::
+</code></pre>
+<p>:::caution
+Negative potential consequences of an action.
+:::</p>
+<h1>二.特色功能</h1>
+<ol>
+<li>
+<p><a href="https://docs.mizuki.mysqil.com/special/about/">自定义页面 </a></p>
+</li>
+<li>
+<p><a href="https://docs.mizuki.mysqil.com/special/diary/">日记页面 </a></p>
+</li>
+<li>
+<p><a href="https://docs.mizuki.mysqil.com/special/friends/">友链页面</a></p>
+</li>
+<li>
+<p><a href="https://docs.mizuki.mysqil.com/special/anime/">番剧页面 </a></p>
+</li>
+<li>
+<p><a href="https://docs.mizuki.mysqil.com/special/gallery/">相册页面 </a></p>
+</li>
+<li>
+<p><a href="https://docs.mizuki.mysqil.com/special/other/">其他页面 </a></p>
+</li>
+</ol>
+]]></content>
+    <author>
+      <name>哈雷0V0</name>
+    </author>
+    <category term="教程"></category>
+  </entry>
+  <entry>
+    <title>文章撰写教程</title>
+    <link href="https://v-blog.halei0v0.top/posts/guide2%E6%96%87%E7%AB%A0%E6%92%B0%E5%86%99%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html"/>
+    <id>https://v-blog.halei0v0.top/posts/guide2%E6%96%87%E7%AB%A0%E6%92%B0%E5%86%99%E6%95%99%E7%A8%8B/</id>
+    <published>2025-10-18T00:00:00.000Z</published>
+    <updated>2025-10-18T00:00:00.000Z</updated>
+    <summary>Mizuki博客搭建后的文章撰写教程。</summary>
+    <content type="html"><![CDATA[<h1>1.Markdown语法</h1>
+<h2>什么是Markdown?(必看)</h2>
+<h2><a href="https://docs.mizuki.mysqil.com/press/md/#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E4%BD%BF%E7%94%A8markdown">为什么要使用Markdown?</a></h2>
+<p>使用传统的编辑方案，你得像个鼠标杂技演员，一会儿点粗体一会儿调字号，忙活半天像给文字铺地砖——累到想把键盘当枕头。但Markdown不一样，这货堪称"文字界的懒人福音"，就像发现外卖软件的厨房小白，从此告别格式挣扎，专注干饭...啊不，专注写作。</p>
+<p>有人说这玩意叫"马可蛋"，因为学会它，你敲字的速度能赶上马在奔跑中下蛋的概率——听着离谱，但用过的人都知道：这概率居然挺高！</p>
+<h2><a href="https://docs.mizuki.mysqil.com/press/md/#%E8%BF%99%E8%B4%A7%E5%88%B0%E5%BA%95%E6%98%AF%E4%B8%AA%E5%95%A5">这货到底是个啥？</a></h2>
+<p>简单说，Markdown是一种让文字"自己打扮自己"的神奇咒语。2004年有个叫约翰·格鲁伯的老哥大概是受够了HTML的啰嗦，大手一挥发明了这东西——就像嫌系鞋带麻烦直接发明魔术贴一样天才。</p>
+<p>它的脾气特别好：</p>
+<ul>
+<li>用<code>#</code>号当帽子，文字就知道自己是标题；</li>
+<li>给句子套个<code>*</code>号，它就乖乖斜着站；</li>
+<li>想列清单？加个短横线，文字立马排好队站军姿。</li>
+</ul>
+<p>最绝的是，就算你忘了给它"施法"，纯文本状态下的Markdown也长得眉清目秀，不像某些格式文件，换个软件打开就变成乱码抽象画。</p>
+<h2><a href="https://docs.mizuki.mysqil.com/press/md/#%E5%87%AD%E5%95%A5%E5%AE%83%E6%AF%94word%E9%A6%99">凭啥它比Word香？</a></h2>
+<p>Word就像个堆满按钮的战斗机驾驶舱，想加粗文字得先找半天按钮；Markdown则是共享单车，扫码就走。</p>
+<ul>
+<li><strong>省脑子</strong>：记住几个符号比背Office快捷键容易，就像记外卖电话比背菜谱简单；</li>
+<li><strong>不挑设备</strong>：在手机上敲的.md文件，到电脑上打开照样整整齐齐，不像某些文档换个设备就"水土不服"；</li>
+<li><strong>变身达人</strong>：想变HTML？变PDF？变Word？它都行，堪比文字界的变形金刚；</li>
+<li><strong>适合装X</strong>：程序员看你用Markdown写文档会说"哥们儿懂行"，用Word则可能被吐槽"还在用记事本呢？"</li>
+</ul>
+<h2><a href="https://docs.mizuki.mysqil.com/press/md/#%E5%93%AA%E4%BA%9B%E4%BA%BA%E8%AF%A5%E5%AD%A6%E8%BF%99%E6%8B%9B">哪些人该学这招？</a></h2>
+<ul>
+<li>写技术文档的码农：再也不用在代码里插一堆<code>&lt;b&gt;</code>标签，就像给汉堡包插牙签——多此一举；</li>
+<li>记笔记的学生党：上课记重点时，用<code>##</code>标标题比画下划线快10倍，期末复习时再也不用对着乱涂的笔记本发呆；</li>
+<li>发博客的博主：在知乎、简书敲文时，<code>**</code>加粗比找工具栏按钮爽，就像用语音输入代替手写；</li>
+<li>摸鱼爱好者：格式搞定快，摸鱼时间多，懂的都懂。</li>
+</ul>
+<h2><a href="https://docs.mizuki.mysqil.com/press/md/#markdown%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90">Markdown学习资源</a></h2>
+<p>📚 <strong>推荐学习地址</strong>：<a href="https://www.runoob.com/markdown/md-tutorial.html">菜鸟教程 - Markdown教程</a>
+（偷偷说：这教程简单到猫都能学会，前提是猫想学）</p>
+<p>最后友情提示：学会Markdown不能让马真下蛋，但能让你从格式奴隶变成文字甩手掌柜。现在就打开记事本试试——# 我要当效率大师，怎么样，是不是有内味儿了？</p>
+<h1>2.文件</h1>
+<h2>单文件方案</h2>
+<p>这是在Mizuka博客系统中创建文章的两种方法之一。这种方法适用于简单的文章，不需要管理大量图片资源的情况。 单文件方案会导致RSS无法正常构建图片的路径(指本地,如果你使用图床那么不会有这个问题),如果你需要使用rss功能请使用文件夹写作方案</p>
+<h2><a href="https://docs.mizuki.mysqil.com/press/file/#%E5%88%9B%E5%BB%BA%E6%96%87%E7%AB%A0">创建文章</a></h2>
+<ol>
+<li>在<code>src/content/posts</code>目录下创建一个新的Markdown文件，文件名应该具有描述性，例如<code>my-first-post.md</code>。</li>
+<li>在文件中添加frontmatter（前置元数据），这是文章的配置信息，必须包含<code>title</code>和<code>description</code>字段：</li>
+</ol>
+<pre><code>---
+title: Markdown Tutorial
+published: 2025-01-20
+pinned: true
+description: A simple example of a Markdown blog post.
+tags: [Markdown, Blogging]
+category: Examples
+licenseName: "Unlicensed"
+author: emn178
+sourceLink: "https://github.com/emn178/markdown"
+draft: false
+date: 2025-01-20
+image:
+  url: 'https://example.com/image.jpg'
+  alt: '图片描述'
+pubDate: 2025-01-20
+---
+</code></pre>
+<h2><a href="https://docs.mizuki.mysqil.com/press/file/#frontmatter%E5%AD%97%E6%AE%B5%E8%AF%A6%E8%A7%A3">Frontmatter字段详解</a></h2>
+<p>frontmatter支持的字段包括：</p>
+<h3><a href="https://docs.mizuki.mysqil.com/press/file/#%E5%BF%85%E9%9C%80%E5%AD%97%E6%AE%B5">必需字段</a></h3>
+<ul>
+<li><code>title</code>：文章标题（必需）</li>
+<li><code>description</code>：文章描述（必需）</li>
+</ul>
+<h3><a href="https://docs.mizuki.mysqil.com/press/file/#%E5%8F%91%E5%B8%83%E7%9B%B8%E5%85%B3">发布相关</a></h3>
+<ul>
+<li><code>published</code>：文章发布日期，格式为YYYY-MM-DD</li>
+<li><code>pubDate</code>：文章发布日期（与published类似）</li>
+<li><code>date</code>：文章创建日期</li>
+<li><code>draft</code>：是否为草稿，true表示草稿，false表示正式发布</li>
+</ul>
+<h3><a href="https://docs.mizuki.mysqil.com/press/file/#%E5%86%85%E5%AE%B9%E5%88%86%E7%B1%BB">内容分类</a></h3>
+<ul>
+<li><code>tags</code>：文章标签数组，用于标记文章主题</li>
+<li><code>category</code>：文章分类，用于组织文章</li>
+<li><code>pinned</code>：是否置顶文章，true表示置顶</li>
+</ul>
+<h3><a href="https://docs.mizuki.mysqil.com/press/file/#%E4%BD%9C%E8%80%85%E4%BF%A1%E6%81%AF">作者信息</a></h3>
+<ul>
+<li><code>author</code>：文章作者姓名</li>
+<li><code>licenseName</code>：文章许可证名称，如"MIT"、"CC BY 4.0"等</li>
+<li><code>sourceLink</code>：文章源链接，通常指向GitHub仓库或原始来源</li>
+</ul>
+<h3><a href="https://docs.mizuki.mysqil.com/press/file/#%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE">图片设置</a></h3>
+<ul>
+<li>
+<pre><code>image
+</code></pre>
+<p>：文章封面图片(单文件方案会导致RSS无法正常构建图片的路径,如果你需要使用rss功能请使用文件夹写作方案)</p>
+<ul>
+<li><code>url</code>：图片URL地址</li>
+<li><code>alt</code>：图片替代文本</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>在frontmatter下方编写文章内容，可以使用标准的Markdown语法。</li>
+</ol>
+<h2><a href="https://docs.mizuki.mysqil.com/press/file/#markdown%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90">Markdown学习资源</a></h2>
+<p>如果您还不熟悉Markdown语法，建议先学习基础知识：</p>
+<p>📚 <strong>推荐学习地址</strong>：<a href="https://www.runoob.com/markdown/md-tutorial.html">菜鸟教程 - Markdown教程</a></p>
+<p>这个教程涵盖了：</p>
+<ul>
+<li>Markdown基本语法</li>
+<li>标题、段落、换行</li>
+<li>字体样式（粗体、斜体等）</li>
+<li>列表、链接、图片</li>
+<li>代码块、表格</li>
+<li>高级功能</li>
+</ul>
+<p>掌握这些基础语法后，您就可以轻松编写美观的博客文章了！</p>
+<h2><a href="https://docs.mizuki.mysqil.com/press/file/#frontmatter%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">Frontmatter最佳实践</a></h2>
+<h3><a href="https://docs.mizuki.mysqil.com/press/file/#%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F">日期格式</a></h3>
+<p>建议使用ISO 8601格式（YYYY-MM-DD）来设置日期：</p>
+<pre><code>published: 2025-01-20
+date: 2025-01-20
+pubDate: 2025-01-20
+</code></pre>
+<h3><a href="https://docs.mizuki.mysqil.com/press/file/#%E6%A0%87%E7%AD%BE%E5%92%8C%E5%88%86%E7%B1%BB">标签和分类</a></h3>
+<ul>
+<li>标签应该具体且相关，避免过于宽泛</li>
+<li>分类用于高级组织，通常比标签更宽泛</li>
+<li>示例：</li>
+</ul>
+<pre><code>tags: [Vue.js, JavaScript, Frontend, Tutorial]
+category: Web Development
+</code></pre>
+<h3><a href="https://docs.mizuki.mysqil.com/press/file/#%E8%8D%89%E7%A8%BF%E7%AE%A1%E7%90%86">草稿管理</a></h3>
+<p>使用<code>draft</code>字段来管理文章状态：</p>
+<ul>
+<li><code>draft: true</code> - 文章不会在生产环境中显示</li>
+<li><code>draft: false</code> - 文章正常发布</li>
+</ul>
+<h3><a href="https://docs.mizuki.mysqil.com/press/file/#%E8%AE%B8%E5%8F%AF%E8%AF%81%E8%AE%BE%E7%BD%AE">许可证设置</a></h3>
+<p>常见的许可证名称：</p>
+<ul>
+<li>"MIT"</li>
+<li>"Apache-2.0"</li>
+<li>"CC BY 4.0"</li>
+<li>"CC BY-SA 4.0"</li>
+<li>"Unlicensed"</li>
+</ul>
+<h3><a href="https://docs.mizuki.mysqil.com/press/file/#%E5%AE%8C%E6%95%B4%E7%A4%BA%E4%BE%8B">完整示例</a></h3>
+<pre><code>---
+title: "Vue.js 3 组合式API完全指南"
+published: 2025-01-20
+pinned: false
+description: "深入了解Vue.js 3的组合式API，包括setup函数、响应式系统和生命周期钩子。"
+tags: [Vue.js, JavaScript, Frontend, API]
+category: "Web Development"
+licenseName: "CC BY 4.0"
+author: "张三"
+sourceLink: "https://github.com/zhangsan/vue3-guide"
+draft: false
+date: 2025-01-20
+image:
+  url: 'https://example.com/vue3-cover.jpg'
+  alt: 'Vue.js 3 组合式API指南封面'
+pubDate: 2025-01-20
+---
+
+# Vue.js 3 组合式API完全指南
+
+在这篇文章中，我们将深入探讨Vue.js 3的组合式API...
+</code></pre>
+<h2><a href="https://docs.mizuki.mysqil.com/press/file/#%E9%A2%84%E8%A7%88%E6%96%87%E7%AB%A0">预览文章</a></h2>
+<p>保存文件后，可以在浏览器中预览文章。将文章文件名（不包括.md扩展名）拼接到预览URL的末尾即可查看。 例如，如果本地开发服务器运行在<code>http://localhost:4321/</code>，文章文件名为<code>my-first-post.md</code>，则可以通过<code>http://localhost:4321/posts/my-first-post</code>访问文章。</p>
+<p>如果文章尚未创建或文件名错误，页面将显示404错误。当你预览一个尚未创建的文章时，控制台会显示不同的输出，这有助于进行故障排查。</p>
+<h2><a href="https://docs.mizuki.mysqil.com/press/file/#%E9%93%BE%E6%8E%A5%E5%88%B0%E6%96%87%E7%AB%A0">链接到文章</a></h2>
+<p>要在博客页面或其他页面中链接到你的文章，可以使用标准的HTML <code>&lt;a&gt;</code> 标签：</p>
+<pre><code>&lt;a href="/posts/my-first-post/"&gt;我的第一篇文章&lt;/a&gt;
+</code></pre>
+<p>确保链接的href属性指向正确的文章路径。</p>
+<h2><a href="https://docs.mizuki.mysqil.com/press/file/#%E6%B7%BB%E5%8A%A0%E5%9B%BE%E7%89%87">添加图片</a></h2>
+<p>如果需要在文章中添加图片，可以将图片文件放在<code>public</code>目录下，然后在文章中通过相对路径引用：</p>
+<pre><code>![图片描述](/images/my-image.png)
+</code></pre>
+<h2><a href="https://docs.mizuki.mysqil.com/press/file/#%E5%88%9B%E5%BB%BA%E5%A4%9A%E7%AF%87%E6%96%87%E7%AB%A0">创建多篇文章</a></h2>
+<p>你可以在<code>src/content/posts/</code>目录下创建多个Markdown文件，每个文件代表一篇文章。例如：</p>
+<pre><code>src/content/posts/
+├── my-first-post.md
+├── my-second-post.md
+└── my-third-post.md
+</code></pre>
+<p>每篇文章都是一个独立的Markdown文件，文件名将被用作文章的URL路径。</p>
+<h2><a href="https://docs.mizuki.mysqil.com/press/file/#%E9%93%BE%E6%8E%A5%E5%A4%9A%E7%AF%87%E6%96%87%E7%AB%A0">链接多篇文章</a></h2>
+<p>要在博客页面中链接到多篇文章，可以创建一个文章列表：</p>
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;&lt;a href="/posts/my-first-post/"&gt;我的第一篇文章&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/posts/my-second-post/"&gt;我的第二篇文章&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/posts/my-third-post/"&gt;我的第三篇文章&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>确保每个链接都指向正确的文章路径。</p>
+<h2><a href="https://docs.mizuki.mysqil.com/press/file/#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9">注意事项</a></h2>
+<ul>
+<li>文件名将被用作文章的URL路径，所以应该具有描述性且不含特殊字符</li>
+<li>frontmatter中的<code>date</code>字段是可选的，如果不提供，系统会使用文件的创建日期</li>
+<li>这种方法适合简单的文章，但如果文章包含大量图片，建议使用子文件夹方案</li>
+</ul>
+<h1>3.文件夹</h1>
+<h2>文件夹方案（推荐）</h2>
+<p>这是在Mizuka博客系统中创建文章的推荐方法。这种方法更适合复杂的文章，特别是包含大量图片或其他资源的文章。</p>
+<h2><a href="https://docs.mizuki.mysqil.com/press/folder/#%E5%88%9B%E5%BB%BA%E6%96%87%E7%AB%A0">创建文章</a></h2>
+<ol>
+<li>在<code>src/content/posts</code>目录下创建一个新的文件夹，文件夹名应该具有描述性，例如<code>my-complex-post</code>。</li>
+<li>在新创建的文件夹中创建一个名为<code>index.md</code>的文件。</li>
+<li>在<code>index.md</code>文件中添加frontmatter（前置元数据），这是文章的配置信息，必须包含<code>title</code>和<code>description</code>字段：</li>
+</ol>
+<pre><code>---
+title: Markdown Tutorial
+published: 2025-01-20
+pinned: true
+description: A simple example of a Markdown blog post.
+tags: [Markdown, Blogging]
+category: Examples
+licenseName: "Unlicensed"
+author: emn178
+sourceLink: "https://github.com/emn178/markdown"
+draft: false
+date: 2025-01-20
+image:
+  url: './cover.jpg'
+  alt: '文章封面'
+pubDate: 2025-01-20
+---
+</code></pre>
+<h2><a href="https://docs.mizuki.mysqil.com/press/folder/#frontmatter%E5%AD%97%E6%AE%B5%E8%AF%A6%E8%A7%A3">Frontmatter字段详解</a></h2>
+<p>frontmatter支持的字段包括：</p>
+<h3><a href="https://docs.mizuki.mysqil.com/press/folder/#%E5%BF%85%E9%9C%80%E5%AD%97%E6%AE%B5">必需字段</a></h3>
+<ul>
+<li><code>title</code>：文章标题（必需）</li>
+<li><code>description</code>：文章描述（必需）</li>
+</ul>
+<h3><a href="https://docs.mizuki.mysqil.com/press/folder/#%E5%8F%91%E5%B8%83%E7%9B%B8%E5%85%B3">发布相关</a></h3>
+<ul>
+<li><code>published</code>：文章发布日期，格式为YYYY-MM-DD</li>
+<li><code>pubDate</code>：文章发布日期（与published类似）</li>
+<li><code>date</code>：文章创建日期</li>
+<li><code>draft</code>：是否为草稿，true表示草稿，false表示正式发布</li>
+</ul>
+<h3><a href="https://docs.mizuki.mysqil.com/press/folder/#%E5%86%85%E5%AE%B9%E5%88%86%E7%B1%BB">内容分类</a></h3>
+<ul>
+<li><code>tags</code>：文章标签数组，用于标记文章主题</li>
+<li><code>category</code>：文章分类，用于组织文章</li>
+<li><code>pinned</code>：是否置顶文章，true表示置顶</li>
+</ul>
+<h3><a href="https://docs.mizuki.mysqil.com/press/folder/#%E4%BD%9C%E8%80%85%E4%BF%A1%E6%81%AF">作者信息</a></h3>
+<ul>
+<li><code>author</code>：文章作者姓名</li>
+<li><code>licenseName</code>：文章许可证名称，如"MIT"、"CC BY 4.0"等</li>
+<li><code>sourceLink</code>：文章源链接，通常指向GitHub仓库或原始来源</li>
+</ul>
+<h3><a href="https://docs.mizuki.mysqil.com/press/folder/#%E5%9B%BE%E7%89%87%E8%AE%BE%E7%BD%AE">图片设置</a></h3>
+<ul>
+<li>
+<pre><code>image
+</code></pre>
+<p>：文章封面图片</p>
+<ul>
+<li><code>url</code>：图片URL地址（可以是相对路径如'./cover.jpg'）</li>
+<li><code>alt</code>：图片替代文本</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>在frontmatter下方编写文章内容，可以使用标准的Markdown语法。</li>
+</ol>
+<h2><a href="https://docs.mizuki.mysqil.com/press/folder/#markdown%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90">Markdown学习资源</a></h2>
+<p>如果您还不熟悉Markdown语法，建议先学习基础知识：</p>
+<p>📚 <strong>推荐学习地址</strong>：<a href="https://www.runoob.com/markdown/md-tutorial.html">菜鸟教程 - Markdown教程</a></p>
+<p>这个教程涵盖了：</p>
+<ul>
+<li>Markdown基本语法</li>
+<li>标题、段落、换行</li>
+<li>字体样式（粗体、斜体等）</li>
+<li>列表、链接、图片</li>
+<li>代码块、表格</li>
+<li>高级功能</li>
+</ul>
+<p>掌握这些基础语法后，您就可以轻松编写美观的博客文章了！</p>
+<h2><a href="https://docs.mizuki.mysqil.com/press/folder/#frontmatter%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">Frontmatter最佳实践</a></h2>
+<h3><a href="https://docs.mizuki.mysqil.com/press/folder/#%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F">日期格式</a></h3>
+<p>建议使用ISO 8601格式（YYYY-MM-DD）来设置日期：</p>
+<pre><code>published: 2025-01-20
+date: 2025-01-20
+pubDate: 2025-01-20
+</code></pre>
+<h3><a href="https://docs.mizuki.mysqil.com/press/folder/#%E6%A0%87%E7%AD%BE%E5%92%8C%E5%88%86%E7%B1%BB">标签和分类</a></h3>
+<ul>
+<li>标签应该具体且相关，避免过于宽泛</li>
+<li>分类用于高级组织，通常比标签更宽泛</li>
+<li>示例：</li>
+</ul>
+<pre><code>tags: [Vue.js, JavaScript, Frontend, Tutorial]
+category: Web Development
+</code></pre>
+<h3><a href="https://docs.mizuki.mysqil.com/press/folder/#%E8%8D%89%E7%A8%BF%E7%AE%A1%E7%90%86">草稿管理</a></h3>
+<p>使用<code>draft</code>字段来管理文章状态：</p>
+<ul>
+<li><code>draft: true</code> - 文章不会在生产环境中显示</li>
+<li><code>draft: false</code> - 文章正常发布</li>
+</ul>
+<h3><a href="https://docs.mizuki.mysqil.com/press/folder/#%E8%AE%B8%E5%8F%AF%E8%AF%81%E8%AE%BE%E7%BD%AE">许可证设置</a></h3>
+<p>常见的许可证名称：</p>
+<ul>
+<li>"MIT"</li>
+<li>"Apache-2.0"</li>
+<li>"CC BY 4.0"</li>
+<li>"CC BY-SA 4.0"</li>
+<li>"Unlicensed"</li>
+</ul>
+<h3><a href="https://docs.mizuki.mysqil.com/press/folder/#%E5%9B%BE%E7%89%87%E8%B7%AF%E5%BE%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5">图片路径最佳实践</a></h3>
+<p>在子文件夹方法中，推荐使用相对路径引用图片：</p>
+<pre><code>image:
+  url: './cover.jpg'  # 相对于当前文件夹
+  alt: '文章封面图片描述'
+</code></pre>
+<h3><a href="https://docs.mizuki.mysqil.com/press/folder/#%E5%AE%8C%E6%95%B4%E7%A4%BA%E4%BE%8B">完整示例</a></h3>
+<pre><code>---
+title: "React Hooks深度解析"
+published: 2025-01-20
+pinned: true
+description: "全面解析React Hooks的使用方法和最佳实践，包含大量代码示例和图片说明。"
+tags: [React, JavaScript, Hooks, Frontend]
+category: "Web Development"
+licenseName: "MIT"
+author: "李四"
+sourceLink: "https://github.com/lisi/react-hooks-guide"
+draft: false
+date: 2025-01-20
+image:
+  url: './react-hooks-cover.png'
+  alt: 'React Hooks深度解析封面'
+pubDate: 2025-01-20
+---
+
+# React Hooks深度解析
+
+![React Hooks示例](./example-diagram.png)
+
+在这篇文章中，我们将深入探讨React Hooks...
+</code></pre>
+<h2><a href="https://docs.mizuki.mysqil.com/press/folder/#%E9%A2%84%E8%A7%88%E6%96%87%E7%AB%A0">预览文章</a></h2>
+<p>保存文件后，可以在浏览器中预览文章。将文件夹名拼接到预览URL的末尾即可查看。 例如，如果本地开发服务器运行在<code>http://localhost:4321/</code>，文件夹名为<code>my-complex-post</code>，则可以通过<code>http://localhost:4321/posts/my-complex-post</code>访问文章。</p>
+<p>如果文章尚未创建或文件夹名错误，页面将显示404错误。当你预览一个尚未创建的文章时，控制台会显示不同的输出，这有助于进行故障排查。</p>
+<h2><a href="https://docs.mizuki.mysqil.com/press/folder/#%E9%93%BE%E6%8E%A5%E5%88%B0%E6%96%87%E7%AB%A0">链接到文章</a></h2>
+<p>要在博客页面或其他页面中链接到你的文章，可以使用标准的HTML <code>&lt;a&gt;</code> 标签：</p>
+<pre><code>&lt;a href="/posts/my-complex-post/"&gt;我的复杂文章&lt;/a&gt;
+</code></pre>
+<p>确保链接的href属性指向正确的文章路径。</p>
+<h2><a href="https://docs.mizuki.mysqil.com/press/folder/#%E7%AE%A1%E7%90%86%E5%9B%BE%E7%89%87%E5%92%8C%E5%85%B6%E4%BB%96%E8%B5%84%E6%BA%90">管理图片和其他资源</a></h2>
+<p>使用这种方法，你可以将文章相关的所有资源都放在同一个文件夹中，便于管理：</p>
+<pre><code>src/content/posts/my-complex-post/
+├── index.md
+├── image1.png
+├── image2.jpg
+└── data.json
+</code></pre>
+<p>在文章中引用图片时，可以直接使用相对路径：</p>
+<pre><code>![图片描述](image1.png)
+</code></pre>
+<p>注意像这样直接填写文件的名字,这样才能让RSS正常构建图片的路径</p>
+<h2><a href="https://docs.mizuki.mysqil.com/press/folder/#%E5%88%9B%E5%BB%BA%E5%A4%9A%E7%AF%87%E6%96%87%E7%AB%A0">创建多篇文章</a></h2>
+<p>你可以在<code>src/content/posts/</code>目录下创建多个文件夹，每个文件夹代表一篇文章。例如：</p>
+<pre><code>src/content/posts/
+├── my-first-post/
+│   ├── index.md
+│   └── cover.jpg
+├── my-second-post/
+│   ├── index.md
+│   ├── image1.png
+│   └── image2.png
+└── my-third-post/
+    ├── index.md
+    └── data.json
+</code></pre>
+<p>每篇文章都有自己的独立文件夹，便于管理和维护。</p>
+<h2><a href="https://docs.mizuki.mysqil.com/press/folder/#%E9%93%BE%E6%8E%A5%E5%A4%9A%E7%AF%87%E6%96%87%E7%AB%A0">链接多篇文章</a></h2>
+<p>要在博客页面中链接到多篇文章，可以创建一个文章列表：</p>
+<pre><code>&lt;ul&gt;
+  &lt;li&gt;&lt;a href="/posts/my-first-post/"&gt;我的第一篇文章&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/posts/my-second-post/"&gt;我的第二篇文章&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="/posts/my-third-post/"&gt;我的第三篇文章&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>确保每个链接都指向正确的文章路径。</p>
+<h2><a href="https://docs.mizuki.mysqil.com/press/folder/#%E4%BC%98%E5%8A%BF">优势</a></h2>
+<ul>
+<li>所有文章资源集中管理，便于维护</li>
+<li>图片引用更简单，使用相对路径即可</li>
+<li>更好的组织结构，特别是对于包含大量资源的文章</li>
+<li>便于文章的迁移和备份</li>
+<li>每篇文章都有独立的文件夹，避免资源混淆</li>
+</ul>
+<h1>4.文章加密（可选）</h1>
+<h2>文章客户端加密</h2>
+<h2><a href="https://docs.mizuki.mysqil.com/press/key/#%E6%A6%82%E8%BF%B0">概述</a></h2>
+<p>主题使用了 <code>bcryptjs</code> 用于密码的哈希处理，以及 <code>crypto-js</code> 用于内容的对称加密。</p>
+<h2><a href="https://docs.mizuki.mysqil.com/press/key/#%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B">工作流程</a></h2>
+<p>这一阶段发生在访客的浏览器里，当他们访问那个被加密的页面时：</p>
+<h3><a href="https://docs.mizuki.mysqil.com/press/key/#_1-%E7%94%A8%E6%88%B7%E4%BA%A4%E4%BA%92">1. 用户交互</a></h3>
+<p>访客首先看到的不是文章，而是一个密码输入界面。</p>
+<h3><a href="https://docs.mizuki.mysqil.com/press/key/#_2-%E5%AE%A2%E6%88%B7%E7%AB%AF%E9%AA%8C%E8%AF%81%E4%B8%8E%E8%A7%A3%E5%AF%86">2. 客户端验证与解密</a></h3>
+<p>当访客输入密码并点击"解锁"后，页面内嵌的 JavaScript 脚本会执行以下操作：</p>
+<h4><a href="https://docs.mizuki.mysqil.com/press/key/#%E9%AA%8C%E8%AF%81%E5%AF%86%E7%A0%81">验证密码</a></h4>
+<p>脚本会先用 <code>bcryptjs</code> 将访客输入的密码进行同样的哈希计算，然后与页面中预存的那个哈希值进行比对。如果二者匹配，证明密码正确。这是为了快速验证密码，避免用错误的密码去尝试解密，浪费计算资源。</p>
+<h4><a href="https://docs.mizuki.mysqil.com/press/key/#%E8%A7%A3%E5%AF%86%E5%86%85%E5%AE%B9">解密内容</a></h4>
+<p>密码验证通过后，脚本会使用访客刚刚输入的明文密码（它只存在于浏览器内存中，不会被发送到任何地方）作为密钥，调用 <code>crypto-js</code> 来解密页面中存储的文章密文。</p>
+<h4><a href="https://docs.mizuki.mysqil.com/press/key/#%E5%8A%A8%E6%80%81%E6%B8%B2%E6%9F%93">动态渲染</a></h4>
+<p>一旦密文被成功解密，脚本就会将还原出的、包含完整格式的 HTML 内容，动态地插入到页面的相应容器中。</p>
+<h3><a href="https://docs.mizuki.mysqil.com/press/key/#_3-%E5%AE%8C%E6%88%90%E5%B1%95%E7%A4%BA">3. 完成展示</a></h3>
+<p>至此，访客才能看到文章的真实内容。通过这种方式，我们成功地在没有后端的情况下，模拟出了一套安全的"验证-解密-渲染"流程，实现了对静态内容的有效保护。</p>
+<h2><a href="https://docs.mizuki.mysqil.com/press/key/#%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">使用方法</a></h2>
+<p>在文章的 Front Matter 中添加以下配置：</p>
+<pre><code>---
+title: '这是一篇加密文章'
+encrypted: true
+password: 'your-secret-password'
+---
+</code></pre>
+<p>这样定义后就可以实现为文章设定不可逆的文章加密，只有输入正确的密码才能查看文章内容。</p>
+<h1>5.图表</h1>
+<h2>Mermaid图表</h2>
+<p>我们可以使用mermaid语法来在文章中绘制图表</p>
+<pre><code>    ```mermaid
+    graph TD
+        A[Start] --&gt; B{Condition Check}
+        B --&gt;|Yes| C[Process Step 1]
+        B --&gt;|No| D[Process Step 2]
+        C --&gt; E[Subprocess]
+        D --&gt; E
+        subgraph E [Subprocess Details]
+            E1[Substep 1] --&gt; E2[Substep 2]
+            E2 --&gt; E3[Substep 3]
+        end
+        E --&gt; F{Another Decision}
+        F --&gt;|Option 1| G[Result 1]
+        F --&gt;|Option 2| H[Result 2]
+        F --&gt;|Option 3| I[Result 3]
+        G --&gt; J[End]
+        H --&gt; J
+        I --&gt; J
+</code></pre>
+<pre><code></code></pre>
+]]></content>
+    <author>
+      <name>哈雷0V0</name>
+    </author>
+    <category term="教程"></category>
+  </entry>
+  <entry>
+    <title>新的开始！【Mizuki博客搭建教程~】</title>
+    <link href="https://v-blog.halei0v0.top/posts/guide1%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8Bmizuki%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" rel="alternate" type="text/html"/>
+    <id>https://v-blog.halei0v0.top/posts/guide1%E6%96%B0%E7%9A%84%E5%BC%80%E5%A7%8Bmizuki%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</id>
+    <published>2025-10-11T00:00:00.000Z</published>
+    <updated>2025-10-11T00:00:00.000Z</updated>
+    <summary>这是一篇Mizuki博客搭建的教程~</summary>
+    <content type="html"><![CDATA[<h1>Mizuki博客搭建【均来源于5.3版本，6.0+、7.0+版本有细微差异】</h1>
+<p><img src="https://docs.mizuki.mysqil.com/image.png" alt="Mizuki" /></p>
+<h2>下载项目文件</h2>
+<blockquote>
+<p>前往仓库下载项目文件</p>
+<p>我的博客是V5.3版本，可自行选择。</p>
+</blockquote>
+<p>::github{repo="matsuzaka-yuki/Mizuki"}</p>
+<p>自行下载想要的版本解压即可。</p>
+<h1>1.安装使用</h1>
+<ol>
+<li>
+<p>环境依赖安装</p>
+<p>在开始使用 Mizuki 之前，您需要确保系统满足以下要求：</p>
+<ul>
+<li>
+<p><strong>Node.js &gt;= 20</strong></p>
+<p>访问 <a href="https://nodejs.org/">Node.js 官网</a> 下载并安装最新版本的 Node.js。建议使用 LTS 版本。</p>
+<p>安装完成后，打开终端或命令提示符，运行以下命令验证 Node.js 是否安装成功：</p>
+<pre><code>node -v
+npm -v
+</code></pre>
+<p>如果显示版本号，则表示安装成功。</p>
+</li>
+<li>
+<p><strong>pnpm &gt;= 9</strong></p>
+<p>如果您尚未安装 pnpm，可以通过 npm 安装：</p>
+<pre><code>npm install -g pnpm
+</code></pre>
+<p>安装完成后，打开终端或命令提示符，运行以下命令验证 pnpm 是否安装成功：</p>
+<pre><code>pnpm -v
+</code></pre>
+<p>如果显示版本号，则表示安装成功。</p>
+</li>
+<li>
+<p><strong>Github Desktop</strong>/ <strong>Git</strong>（可选）</p>
+<ul>
+<li>下载<a href="https://desktop.github.com/download/">Github Desktop</a></li>
+</ul>
+<p>:::note</p>
+<p>已安装<strong>Github Desktop</strong>无需再安装git</p>
+<p>:::</p>
+<ul>
+<li>（可选）安装git</li>
+</ul>
+<p>访问 <a href="https://git-scm.com/downloads">Git 官网</a> 下载并安装适合您操作系统的 Git 版本。</p>
+<p>安装完成后，打开终端或命令提示符，运行以下命令验证 Git 是否安装成功：</p>
+<pre><code>git --version
+</code></pre>
+<p>如果显示版本号，则表示安装成功。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>启动项目</p>
+<blockquote>
+<p>我们这里不选择直接克隆【国内环境克隆较慢，对小白不友好】</p>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li>
+<p>打开解压好的文件夹</p>
+</li>
+<li>
+<p><code>cmd</code>以管理员身份运行【地址栏输入<code>cmd</code>然后<code>ctrl</code>+<code>shifi</code>+<code>enter</code>】</p>
+<ul>
+<li>
+<p>安装依赖（使用pnpm）</p>
+</li>
+<li>
+<pre><code>pnpm install
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>配置博客</p>
+<ul>
+<li>在启动项目之前，您需要根据自己的需求进行配置【将在配置说明处进行详细说明，这里先进行部署】：
+<ul>
+<li>编辑 <code>src/config.ts</code> 文件来自定义博客设置</li>
+<li>更新站点信息、主题颜色、横幅图片和社交链接</li>
+<li>配置翻译设置和特殊页面功能</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>启动开发服务器</p>
+<ul>
+<li>
+<p>运行以下命令启动开发服务器：</p>
+</li>
+<li>
+<pre><code>pnpm dev
+</code></pre>
+<p>启动成功后，您可以在浏览器中访问 <code>http://localhost:4321</code> 查看您的博客。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1>2.部署</h1>
+<blockquote>
+<p>综合所有方案，这里选择免费方案：<code>Netlify</code>+<code>Github Pages</code>部署</p>
+</blockquote>
+<h2>Github Pages部署</h2>
+<ol>
+<li>Github Pages</li>
+</ol>
+<p>如果您希望将博客托管在 GitHub Pages 上，Mizuki 项目通常会包含一个 GitHub Actions 工作流，可以帮助您自动化部署过程。您需要确保在 <code>astro.config.mjs</code> 中配置正确的 <code>base</code> 路径。</p>
+<ol>
+<li>
+<p>请以<code>&lt;Github用户名&gt;.github.io</code>命名仓库</p>
+<p>在 <code>astro.config.mjs</code> 中配置文件设置 <code>site</code> 和 <code>base</code> 选项。</p>
+<pre><code>import { defineConfig } from 'astro/config'   
+
+export default defineConfig({
+  site: 'https://你自己的域名',    #用于Netlify部署。github pages部署使用&lt;Github用户名&gt;.github.io
+  base: '/',
+  })
+</code></pre>
+<p><code>site</code> 的值必须是以下之一：</p>
+<ul>
+<li>
+<p>基于你的用户名的以下网址: <code>https://&lt;username&gt;.github.io</code></p>
+</li>
+<li>
+<p>为 GitHub 组织的私有页面 自动生成的随机网址：<code>https://&lt;random-string&gt;.pages.github.io/</code></p>
+</li>
+<li>
+<p>自定义域名：</p>
+<ul>
+<li>
+<p>你可以选择通过将一个 ./public/CNAME 文件添加到你的项目中，来设置自定义域
+这会将你的站点部署在你的自定义域而不是 &lt;YOUR_USERNAME&gt;.github.io。
+不要忘记为你的域名提供商配置 DNS。</p>
+</li>
+<li>
+<pre><code>sub.mydomain.com
+</code></pre>
+</li>
+<li>
+<p>要配置 Astro 以在 GitHub Pages 上使用自定义域名，请将你的域名设置为 site 的值。不要为 <code>base</code> 设置值：</p>
+<pre><code>import { defineConfig } from 'astro/config'
+
+export default defineConfig({
+    site: 'https://example.com',
+})
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>配置<strong>Github Action</strong></p>
+<ol>
+<li>
+<p>在你的项目中的 <code>.github/workflows/</code> 目录保留文件 <code>deploy.yml</code>，以下是 YAML 配置信息。（不用添加）</p>
+<pre><code>name: Deploy to GitHub Pages
+on:
+  # 每次推送到 `main` 分支时触发这个“工作流程”
+  # 如果你使用了别的分支名，请按需将 `main` 替换成你的分支名
+  push:
+    branches: [ main ]
+  # 允许你在 GitHub 上的 Actions 标签中手动触发此“工作流程”
+  workflow_dispatch:
+# 允许 job 克隆 repo 并创建一个 page deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+      - name: Install, build, and upload your site
+        uses: withastro/action@v3
+        # with:
+          # path: . # 存储库中 Astro 项目的根位置。（可选）
+          # node-version: 20 # 用于构建站点的特定 Node.js 版本，默认为 20。（可选）
+          # package-manager: pnpm@latest # 应使用哪个 Node.js 包管理器来安装依赖项和构建站点。会根据存储库中的 lockfile 自动检测。（可选）
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li>
+<p>在 GitHub 上，跳转到存储库的 Settings 选项卡并找到设置的 Pages 部分。</p>
+</li>
+<li>
+<p>选择 GitHub Actions 作为你网站的 Source，然后按 Save。</p>
+<p>:::note</p>
+<p>你的网站现在应该已完成发布了！当你将更改推送到 Astro 项目的存储库时，GitHub Action 将自动为你部署它们。</p>
+<p>:::</p>
+</li>
+</ul>
+<h1>3.配置博客</h1>
+<h2>3.1站点配置</h2>
+<blockquote>
+<p><strong>站点配置说明</strong></p>
+<p>站点配置位于 <code>src/config.ts</code> 文件中的 <code>siteConfig</code> 对象，控制博客的基本信息和全局设置。</p>
+</blockquote>
+<h4>配置详解</h4>
+<h4>3.1.1基本信息</h4>
+<pre><code>
+// 定义站点语言
+const SITE_LANG = "zh_CN"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
+
+
+export const siteConfig: SiteConfig = {
+  title: "Mizuki",        // 网站标题
+  subtitle: "One demo website",  // 网站副标题
+  lang: SITE_LANG,         // 不需要配置，会根据 SITE_LANG 自动设置
+}
+</code></pre>
+<ul>
+<li><code>title</code>：网站的主标题，显示在浏览器标签页和页面头部</li>
+<li><code>subtitle</code>：网站的副标题，通常显示在主页横幅下方</li>
+<li><code>lang</code>：网站的默认语言，影响日期格式、翻译等功能</li>
+</ul>
+<h4>3.1.2主题颜色</h4>
+<pre><code>  themeColor: {
+    hue: 210,     // 主题色的色相值，范围 0-360
+    fixed: false, // 是否隐藏访客的主题色选择器
+  },
+</code></pre>
+<ul>
+<li><code>hue</code>：主题色的色相值，可以是 0-360 之间的任何数值
+<ul>
+<li>红色: 0</li>
+<li>青色: 200</li>
+<li>蓝绿色: 250</li>
+<li>粉色: 345</li>
+</ul>
+</li>
+<li><code>fixed</code>：设置为 <code>true</code> 时，访客将无法更改主题色</li>
+</ul>
+<h4>3.1.3横幅设置</h4>
+<p>横幅设置控制主页顶部的横幅显示：</p>
+<pre><code>  banner: {
+    enable: true,  // 是否启用横幅
+    src: {         // 横幅图片路径
+      desktop: [   // 桌面端图片数组
+        "assets/desktop-banner/1.webp",
+        "assets/desktop-banner/2.webp",
+        // 支持多张图片，自动启用轮播
+      ],
+      mobile: [    // 移动端图片数组
+        "assets/mobile-banner/1.webp",
+        "assets/mobile-banner/2.webp",
+        // 移动端专用图片
+      ],
+    },
+    position: "center", // 图片对齐方式，支持 'top', 'center', 'bottom'
+    
+    carousel: {
+      enable: true,    // 启用轮播功能（多图片时）
+      interval: 1,     // 轮播间隔时间（秒）
+    },
+    
+    homeText: {
+      enable: true,    // 在首页显示自定义文本
+      title: "Mizuki", // 首页横幅主标题
+      subtitle: [      // 副标题数组，支持多个文本
+        "One demo website",
+        "Carousel Text1",
+        "Carousel Text2",
+      ],
+      typewriter: {
+        enable: true,     // 启用打字机效果
+        speed: 100,       // 打字速度（毫秒）
+        deleteSpeed: 50,  // 删除速度（毫秒）
+        pauseTime: 2000,  // 完整显示后的暂停时间（毫秒）
+      },
+    },
+    
+    credit: {
+      enable: false,    // 显示横幅图片来源文本
+      text: "Describe", // 来源文本
+      url: "",          // 可选：原作品或作者页面链接
+    },
+  },
+
+navbar: {
+		transparentMode: "semifull", // 导航栏透明模式："semi" 半透明加圆角，"full" 完全透明，"semifull" 动态透明
+	},
+</code></pre>
+<h4>3.1.4横幅配置详解</h4>
+<ul>
+<li><strong>图片路径</strong>：相对于 <code>/src</code> 目录，如果以 <code>/</code> 开头则相对于 <code>/public</code> 目录</li>
+<li><strong>轮播功能</strong>：当图片数组长度大于1时自动启用轮播</li>
+<li><strong>响应式设计</strong>：桌面端和移动端可使用不同的图片</li>
+<li><strong>打字机效果</strong>：副标题支持动态打字机效果，可配置速度和暂停时间</li>
+</ul>
+<h4>3.1.5目录设置</h4>
+<pre><code>  toc: {
+    enable: true, // 是否启用目录功能
+    depth: 3,     // 目录深度，1-6，1表示只显示h1标题
+  },
+</code></pre>
+<ul>
+<li><code>enable</code>：设置为 <code>false</code> 可禁用文章目录功能</li>
+<li><code>depth</code>：控制目录显示的标题层级深度</li>
+</ul>
+<h4>3.1.6导航栏二级折叠菜单配置 (<code>navBarConfig</code>)</h4>
+<p>此配置用于控制网站导航栏中的二级折叠菜单。您可以在 <code>src/config.ts</code> 文件中找到并修改它。</p>
+<p><strong>二级菜单示例</strong></p>
+<pre><code>export const navBarConfig: NavBarConfig = {
+	links: [
+		LinkPreset.Home,
+		LinkPreset.Archive,
+		{
+			name: "Links", // 一级菜单名称
+			url: "/links/", // 一级菜单链接 (可选，如果只有子菜单，可以为空)
+			children: [
+				{
+					name: "GitHub", // 二级菜单名称
+					url: "https://github.com/matsuzaka-yuki/Mizuki", // 二级菜单链接
+					external: true, // 外部链接
+				},
+				{
+					name: "Bilibili",
+					url: "https://space.bilibili.com/701864046",
+					external: true,
+				},
+				{
+					name: "Gitee",
+					url: "https://gitee.com/matsuzakayuki/Mizuki",
+					external: true,
+				},
+			],
+		},
+		{
+			name: "My",
+			url: "/content/",
+			children: [
+				LinkPreset.About,
+				LinkPreset.Friends,
+				LinkPreset.Anime,
+				LinkPreset.Diary,
+			],
+		},
+	],
+};
+</code></pre>
+<h4>3.1.7展示社交媒体分享图片(OG)</h4>
+<p>你需要在 <code>src/config.ts</code> 文件中配置OG的开启。</p>
+<pre><code>generateOgImages: true, // 启用生成OpenGraph图片功能
+</code></pre>
+<h2>3.2看板娘配置</h2>
+<p>:::note</p>
+<p>看板娘配置文件位于 <code>src/config.ts</code> 文件中的 <code>pioConfig</code> 对象。</p>
+<p>:::</p>
+<p>可以按照需要开启或关闭看板娘功能。</p>
+<pre><code>// Pio 看板娘配置
+export const pioConfig: import("./types/config").PioConfig = {
+	enable: true, // 启用看板娘
+	models: ["/pio/models/pio/model.json"], // 默认模型路径
+	position: "left", // 默认位置在右侧
+	width: 280, // 默认宽度
+	height: 250, // 默认高度
+	mode: "draggable", // 默认为可拖拽模式
+	hiddenOnMobile: true, // 默认在移动设备上隐藏
+	dialog: {
+		welcome: "欢迎来到 Mizuki 网站！", // 欢迎词
+		touch: [
+			"你在干什么？",
+			"再摸我就报警了！",
+			"HENTAI!",
+			"不可以这样欺负我啦！",
+		], // 触摸提示
+		home: "点击这里回到首页！", // 首页提示
+		skin: ["想看看我的新衣服吗？", "新衣服真漂亮~"], // 换装提示
+		close: "QWQ 下次再见吧~", // 关闭提示
+		link: "https://github.com/matsuzaka-yuki/Mizuki", // 关于链接
+	},
+};
+</code></pre>
+<h2>3.3页脚配置</h2>
+<p>现在,我们来配置页脚</p>
+<pre><code>export const footerConfig: FooterConfig = {
+	enable: false, // 是否启用Footer HTML注入功能
+};
+</code></pre>
+<p>首先把<code>enable</code>设置为<code>true</code></p>
+<p>编辑<code>FooterConfig.html</code>文件,添加你想要的HTML代码,例如:</p>
+<pre><code>    &lt;p&gt;这个一个示例页脚&lt;/p&gt;
+</code></pre>
+<h2>3.4个人资料配置</h2>
+<p><strong>个人资料配置说明</strong></p>
+<p>个人资料配置位于 <code>src/config.ts</code> 文件中的 <code>profileConfig</code> 对象，控制网站侧边栏中的个人信息显示。</p>
+<h4>配置项详解</h4>
+<pre><code>export const profileConfig: ProfileConfig = {
+  avatar: "assets/images/avatar.jpg", // 头像图片路径
+  name: "Mizuki",                     // 用户名
+  bio: "This is a description",       // 个人简介
+  links: [                             // 社交链接
+    {
+      name: "Bilibli",                // 链接名称
+      icon: "fa6-brands:bilibili",    // 图标
+      url: "https://space.bilibili.com/701864046", // 链接地址
+    },
+    // ... 更多链接
+  ],
+};
+</code></pre>
+<h4>3.4.1头像设置</h4>
+<ul>
+<li><code>avatar</code>：头像图片路径，相对于 <code>/src</code> 目录
+<ul>
+<li>如果路径以 <code>/</code> 开头，则相对于 <code>/public</code> 目录</li>
+<li>建议使用正方形图片以获得最佳显示效果</li>
+</ul>
+</li>
+</ul>
+<h4>3.4.2基本信息</h4>
+<ul>
+<li><code>name</code>：显示在头像下方的用户名</li>
+<li><code>bio</code>：个人简介，显示在用户名下方</li>
+</ul>
+<h4>3.4.3社交链接</h4>
+<p>社交链接显示在个人简介下方，支持多种图标：</p>
+<pre><code>links: [
+  {
+    name: "Bilibli",              // 链接名称
+    icon: "fa6-brands:bilibili",  // 图标名称
+    url: "https://space.bilibili.com/701864046", // 链接地址
+  },
+  {
+    name: "Gitee",                // 链接名称
+    icon: "mdi:git",              // 图标名称
+    url: "https://gitee.com/matsuzakayuki", // 链接地址
+  },
+  {
+    name: "GitHub",               // 链接名称
+    icon: "fa6-brands:github",    // 图标名称
+    url: "https://github.com/matsuzaka-yuki", // 链接地址
+  },
+]
+</code></pre>
+<h4>3.4.4图标选择</h4>
+<p>Mizuka 使用 Iconify 图标库，支持多种图标集：</p>
+<ul>
+<li><code>fa6-brands</code>：Font Awesome 6 品牌图标</li>
+<li><code>mdi</code>：Material Design Icons</li>
+<li><code>fa6-solid</code>：Font Awesome 6 实心图标</li>
+<li><code>fa6-regular</code>：Font Awesome 6 空心图标</li>
+</ul>
+<h4>3.4.5修改个人资料</h4>
+<p>要修改个人资料，请编辑 <code>profileConfig</code> 对象：</p>
+<ol>
+<li><strong>更换头像</strong>：替换 <code>avatar</code> 属性的图片路径</li>
+<li><strong>修改用户名</strong>：更改 <code>name</code> 属性</li>
+<li><strong>更新简介</strong>：修改 <code>bio</code> 属性</li>
+<li><strong>管理社交链接</strong>：编辑<code>links</code>数组
+<ul>
+<li>添加新链接：向数组中添加新的链接对象</li>
+<li>删除链接：从数组中移除不需要的链接对象</li>
+<li>修改链接：更改现有链接对象的属性</li>
+</ul>
+</li>
+</ol>
+<h2>3.5导航栏配置说明</h2>
+<p><strong>导航栏配置说明</strong></p>
+<p>导航栏配置位于 <code>src/config.ts</code> 文件中的 <code>navBarConfig</code> 对象，控制网站顶部导航栏的显示内容和链接。</p>
+<h3>配置项详解</h3>
+<pre><code>export const navBarConfig: NavBarConfig = {
+  links: [
+    LinkPreset.Home,      // 首页链接
+    LinkPreset.Archive,   // 归档页面链接
+    LinkPreset.About,     // 关于页面链接
+    LinkPreset.Friends,   // 朋友页面链接
+    LinkPreset.Anime,     // 番剧页面链接
+    LinkPreset.Diary,     // 日记页面链接
+    {
+      name: "GitHub",    // 自定义链接名称
+      url: "https://github.com/matsuzaka-yuki",
+      external: true,     // 是否为外部链接
+    },
+  ],
+};
+</code></pre>
+<h1>4.自定义字体配置</h1>
+<p>本教程将指导您如何在 Mizuki 主题中添加和配置自定义字体。</p>
+<h4>4.1准备工作</h4>
+<p>在开始之前，请确保您已经：</p>
+<ul>
+<li>准备好要添加的字体文件（支持 <code>.ttf</code>、<code>.woff</code>、<code>.woff2</code> 等格式）</li>
+<li>了解字体的名称和基本信息</li>
+<li>具备基本的文件编辑能力</li>
+</ul>
+<h4>4.2添加字体文件</h4>
+<ol>
+<li>将您的字体文件复制到项目的字体目录：</li>
+</ol>
+<pre><code>public/assets/font/
+</code></pre>
+<ol>
+<li>确保字体文件名称清晰易懂，例如：
+<ul>
+<li><code>MyCustomFont.ttf</code></li>
+<li><code>SpecialFont-Bold.woff2</code></li>
+</ul>
+</li>
+</ol>
+<h4>4.3配置字体定义</h4>
+<ol>
+<li>在CSS中定义字体</li>
+</ol>
+<p>打开 <code>src/styles/main.css</code> 文件，在现有的 <code>@font-face</code> 定义后添加您的字体：</p>
+<pre><code>/* 导入您的自定义字体 */
+@font-face {
+    font-family: 'YourFontName';
+    src: url('/assets/font/YourFontFile.ttf') format('truetype');
+    font-weight: normal;
+    font-display: swap;
+}
+</code></pre>
+<p><strong>参数说明：</strong></p>
+<ul>
+<li><code>font-family</code>: 字体的名称，用于在 CSS 中引用</li>
+<li><code>src</code>: 字体文件的路径</li>
+<li><code>font-weight</code>: 字体粗细（normal、bold、100-900）</li>
+<li><code>font-display</code>: 字体加载策略，建议使用 <code>swap</code></li>
+</ul>
+<ol>
+<li>创建字体应用类</li>
+</ol>
+<p>在同一文件中，添加字体应用类：</p>
+<pre><code>/* 当启用您的自定义字体时应用为全局字体 */
+.your-font-enabled {
+    font-family: 'YourFontName', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+</code></pre>
+<p>:::note</p>
+<p><strong>注意：</strong> 类名建议使用小写字母和连字符，例如 <code>custom-font-enabled</code>。</p>
+<p>:::</p>
+<ol>
+<li>更新配置文件</li>
+</ol>
+<p>修改主配置文件</p>
+<p>打开 <code>src/config.ts</code> 文件，在 <code>font</code> 配置部分添加您的字体选项：</p>
+<pre><code>// 字体配置
+font: {
+    zenMaruGothic: {
+        enable: true, // 启用全局圆体
+    },
+    yourCustomFont: {
+        enable: false, // 启用您的自定义字体
+    },
+},
+</code></pre>
+<p><strong>配置说明：</strong></p>
+<ul>
+<li>键名应该使用驼峰命名法</li>
+<li><code>enable</code> 属性控制字体是否启用</li>
+<li>可以同时启用多个字体</li>
+</ul>
+<ol>
+<li>更新类型定义</li>
+</ol>
+<pre><code>font: {
+    zenMaruGothic: {
+        enable: boolean; // 启用全局圆体
+    };
+    yourCustomFont: {
+        enable: boolean; // 启用您的自定义字体
+    };
+};
+</code></pre>
+<ol>
+<li>应用字体到布局</li>
+</ol>
+<p>打开 <code>src/layouts/Layout.astro</code> 文件，找到 <code>&lt;body&gt;</code> 标签，在 <code>class:list</code> 中添加您的字体类：</p>
+<pre><code>&lt;body class="min-h-screen" class:list={[
+    {
+        "lg:is-home": isHomePage, 
+        "enable-banner": enableBanner,
+        "zen-maru-gothic-enabled": siteConfig.font.zenMaruGothic.enable,
+        "your-font-enabled": siteConfig.font.yourCustomFont.enable
+    }
+]}
+    data-overlayscrollbars-initialize
+&gt;
+</code></pre>
+<ol>
+<li>测试和使用</li>
+</ol>
+<p><strong>应用字体</strong>：在 <code>src/config.ts</code> 中将您的字体的 <code>enable</code> 设置为 <code>true</code></p>
+<p><strong>重启开发服务器</strong>：</p>
+<pre><code>npm run dev
+</code></pre>
+<p><strong>检查效果</strong>：打开浏览器查看字体是否正确应用</p>
+<h1>5.其他：文章客户端加密</h1>
+<p>:::note</p>
+<p>博客特色配置说明请前往<a href="https://v-blog.halei0v0.top/posts/guide3/">Mizuki博客使用技巧 - 哈雷0V0的博客</a></p>
+<p>【<a href="https://docs.mizuki.mysqil.com/config/other-config/">更多参照</a>、<a href="https://docs.mizuki.mysqil.com/config/umami-config/#%E8%AE%B8%E5%8F%AF%E8%AF%81%E9%85%8D%E7%BD%AE">Umami访问量统计配置说明 </a>】</p>
+<p>:::</p>
+<h3>概述</h3>
+<p>主题使用了 <code>bcryptjs</code> 用于密码的哈希处理，以及 <code>crypto-js</code> 用于内容的对称加密。</p>
+<h3>作流程</h3>
+<p>这一阶段发生在访客的浏览器里，当他们访问那个被加密的页面时：</p>
+<h3>1. 用户交互</h3>
+<p>访客首先看到的不是文章，而是一个密码输入界面。</p>
+<h3>2. 客户端验证与解密</h3>
+<p>当访客输入密码并点击"解锁"后，页面内嵌的 JavaScript 脚本会执行以下操作：</p>
+<h4>验证密码</h4>
+<p>脚本会先用 <code>bcryptjs</code> 将访客输入的密码进行同样的哈希计算，然后与页面中预存的那个哈希值进行比对。如果二者匹配，证明密码正确。这是为了快速验证密码，避免用错误的密码去尝试解密，浪费计算资源。</p>
+<h4>解密内容</h4>
+<p>密码验证通过后，脚本会使用访客刚刚输入的明文密码（它只存在于浏览器内存中，不会被发送到任何地方）作为密钥，调用 <code>crypto-js</code> 来解密页面中存储的文章密文。</p>
+<h4>动态渲染</h4>
+<p>一旦密文被成功解密，脚本就会将还原出的、包含完整格式的 HTML 内容，动态地插入到页面的相应容器中。</p>
+<h3>3. 完成展示</h3>
+<p>至此，访客才能看到文章的真实内容。通过这种方式，我们成功地在没有后端的情况下，模拟出了一套安全的"验证-解密-渲染"流程，实现了对静态内容的有效保护。</p>
+<h4>使用方法</h4>
+<p>在文章的 Front Matter 中添加以下配置：</p>
+<pre><code>---
+title: '这是一篇加密文章'
+encrypted: true
+password: 'your-secret-password'
+---
+</code></pre>
+<p>这样定义后就可以实现为文章设定不可逆的文章加密，只有输入正确的密码才能查看文章内容。</p>
+<pre><code>src/content/posts/
+├── post-1.md                # 文章文件（封面图使用网络图片或public目录图片）
+└── post-2/                  # 包含文章和封面图的子目录
+    ├── cover.png            # 封面图（相对路径：./cover.png）
+    └── index.md             # 文章内容
+</code></pre>
+<h1>6.软件推荐</h1>
+<p><a href="https://kevinwu06.lanzout.com/iXkq30icv1ha">markdown编辑工具（Typora1.3.6）</a>：https://kevinwu06.lanzout.com/iXkq30icv1ha</p>
+]]></content>
+    <author>
+      <name>哈雷0V0</name>
+    </author>
+    <category term="教程"></category>
+  </entry>
+</feed>
