@@ -1,32 +1,31 @@
 ---
+import { siteConfig } from "../config";
+import { getDiaryList, getDiaryStats } from "../data/diary";
 import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
 import MainGridLayout from "../layouts/MainGridLayout.astro";
 
-// 示例即刻短文数据
-const moments = [
-	{
-		id: 1,
-		content:
-			"哈哈~我的博客诞生啦！欢迎大家来访，希望你们喜欢这里的内容！🎉",
-		date: "2025-10-08",
-		images: ["/images/diary/start1.jpeg", "/images/diary/start2.jpeg"],
-	},
-	{
-		id: 2,
-		content:
-			"2025.10.24博客更新到V5.3并部署到了Vercel和Netlify上使用新域名！！🎉但是作者也是同一时间推出了V6.1【莫名其妙Vercel和netlify部署到环境预览会报错，未解决，但好像不影响就不管了】",
-		date: "2025-10-24",
-		images: ["/images/diary/start3.jpeg","/images/diary/show1.jpeg"],
-	},
-];
+// 检查日记页面是否启用
+if (!siteConfig.featurePages.diary) {
+	return Astro.redirect("/404/");
+}
+
+// 获取日记数据
+const moments = getDiaryList();
+const diaryStats = getDiaryStats();
 
 // 时间格式化函数
 function formatTime(dateString: string): string {
+	var TG = 8;
+	if (siteConfig.timeZone >= -12 && siteConfig.timeZone <= 12)
+		TG = siteConfig.timeZone;
+	const timeGap = TG;
+
+	const lang = siteConfig.lang;
 	const now = new Date();
 	const date = new Date(dateString);
 	const diffInMinutes = Math.floor(
-		(now.getTime() - date.getTime()) / (1000 * 60),
+		(now.getTime() + timeGap * 60 * 60 * 1000 - date.getTime()) / (1000 * 60),
 	);
 
 	if (diffInMinutes < 60) {
@@ -43,9 +42,13 @@ function formatTime(dateString: string): string {
 ---
 
 <MainGridLayout title={i18n(I18nKey.diary)} description="即刻短文">
+	<!-- 引入右侧边栏布局管理器 -->
+  <script>
+    import('/src/scripts/right-sidebar-layout.js');
+  </script>
 	<div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
 		<div class="card-base z-10 px-4 py-4 md:px-6 md:py-5 relative w-full">
-			<div class="relative max-w-4xl">
+		<div class="relative max-w-4xl w-full px-2 md:px-0">
 				<!-- 页面头部 -->
 				<div class="moments-header mb-6">
 					<div class="header-content">
@@ -55,7 +58,7 @@ function formatTime(dateString: string): string {
 						</div>
 						<div class="header-stats">
 							<div class="stat-item text-center">
-								<span class="stat-number text-lg md:text-xl lg:text-2xl font-bold text-[var(--primary)]">{moments.length}</span>
+								<span class="stat-number text-lg md:text-xl lg:text-2xl font-bold text-[var(--primary)]">{diaryStats.total}</span>
 								<span class="stat-label text-xs md:text-sm lg:text-base text-75">{i18n(I18nKey.diaryCount)}</span>
 							</div>
 						</div>
@@ -76,7 +79,7 @@ function formatTime(dateString: string): string {
 					<div class="image-item relative rounded-md overflow-hidden aspect-square cursor-pointer hover:scale-105 transition-transform">
 						<img 
 							src={image} 
-							alt={i18n(I18nKey.diaryImage)}
+								alt="diary moment image"
 							class="w-full h-full object-cover"
 							loading="lazy"
 						/>
@@ -251,10 +254,6 @@ function formatTime(dateString: string): string {
 	
 	/* 优化小屏幕显示 */
 	@media (max-width: 480px) {
-		.card-base {
-			margin: 0 -0.5rem;
-		}
-		
 		.moment-item {
 			border-radius: 8px;
 		}

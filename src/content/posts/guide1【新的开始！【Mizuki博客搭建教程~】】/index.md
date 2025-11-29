@@ -8,7 +8,7 @@ category: 教程
 draft: false
 ---
 
-# Mizuki博客搭建
+# Mizuki博客搭建【均来源于5.3版本，6.0+、7.0+版本有细微差异】
 
 ![Mizuki](https://docs.mizuki.mysqil.com/image.png)
 

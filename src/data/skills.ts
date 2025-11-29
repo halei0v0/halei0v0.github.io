@@ -141,8 +141,6 @@ export const skillsData: Skill[] = [
 		projects: ["ui-design", "image-processing"],
 		color: "#31A8FF",
 	},
-
-	// Other Skills
 ];
 
 // Get skill statistics

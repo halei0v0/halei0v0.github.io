@@ -50,7 +50,7 @@
 
 *基于 Astro-Mizuki模版构建，灵感源自现代网页设计理念，饱含心意打造。*
 
-# 以下是关于Mizuki模版
+# 【EN】以下是关于Mizuki模版
 
 ## This website is built with the **Astro** framework using the [Mizuki](https://github.com/matsuzaka-yuki/mizuki) theme.
 

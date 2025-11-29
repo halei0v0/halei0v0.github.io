@@ -230,55 +230,55 @@ export const timelineData: TimelineItem[] = [
     //  other: 其他事件
 
 	//图标：
-// 	技术
-// 	// 前端
-// skill-icons:html
-// skill-icons:css
-// skill-icons:javascript
-// skill-icons:typescript
-// skill-icons:react-dark
-// skill-icons:vue-dark
-// skill-icons:angular-dark
+	// 	技术
+	// 	// 前端
+	// skill-icons:html
+	// skill-icons:css
+	// skill-icons:javascript
+	// skill-icons:typescript
+	// skill-icons:react-dark
+	// skill-icons:vue-dark
+	// skill-icons:angular-dark
 
-// // 后端
-// skill-icons:nodejs-dark
-// skill-icons:python-dark
-// skill-icons:java-dark
-// skill-icons:php-dark
-// skill-icons:golang
+	// // 后端
+	// skill-icons:nodejs-dark
+	// skill-icons:python-dark
+	// skill-icons:java-dark
+	// skill-icons:php-dark
+	// skill-icons:golang
 
-// // 数据库
-// skill-icons:mysql-dark
-// skill-icons:postgresql-dark
-// skill-icons:mongodb
-// skill-icons:redis-dark
+	// // 数据库
+	// skill-icons:mysql-dark
+	// skill-icons:postgresql-dark
+	// skill-icons:mongodb
+	// skill-icons:redis-dark
 
-// // 工具
-// skill-icons:git
-// skill-icons:docker
-// skill-icons:kubernetes
-// skill-icons:aws-dark
+	// // 工具
+	// skill-icons:git
+	// skill-icons:docker
+	// skill-icons:kubernetes
+	// skill-icons:aws-dark
 
 
-// 通用：
-// // 工作相关
-// mdi:briefcase          # 工作
-// mdi:school             # 教育
-// mdi:trophy             # 成就
-// mdi:certificate        # 证书
+	// 通用：
+	// // 工作相关
+	// mdi:briefcase          # 工作
+	// mdi:school             # 教育
+	// mdi:trophy             # 成就
+	// mdi:certificate        # 证书
 
-// // 项目相关
-// mdi:code-braces        # 代码
-// mdi:web                # 网站
-// mdi:cellphone          # 移动应用
-// mdi:desktop-classic    # 桌面应用
+	// // 项目相关
+	// mdi:code-braces        # 代码
+	// mdi:web                # 网站
+	// mdi:cellphone          # 移动应用
+	// mdi:desktop-classic    # 桌面应用
 
-// // 链接相关
-// mdi:github             # GitHub
-// mdi:link-variant       # 链接
-// mdi:eye                # 预览
-// mdi:download           # 下载
-];
+	// // 链接相关
+	// mdi:github             # GitHub
+	// mdi:link-variant       # 链接
+	// mdi:eye                # 预览
+	// mdi:download           # 下载
+	];
 
 // Get timeline statistics
 export const getTimelineStats = () => {
