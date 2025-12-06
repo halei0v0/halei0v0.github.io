@@ -98,7 +98,7 @@
         const repos = await reposRes.json();
         renderRepos(repos);
       } catch (err) {
-        reposContainer.innerHTML = `<div class="empty">载入失败：${err.message}. 若本地打开文件导致跨域或速率限制问题，请使用本地静态服务器（见下方说明）。</div>`;
+        reposContainer.innerHTML = `<div class="empty">载入失败：${err.message}. Github API调取已达到限制【匿名用户每小时60次】，先去看看我的博客等下再来吧~~</div>`;
         console.error(err);
       } finally {
         loadingSpinner.style.display = 'none';
