@@ -40,7 +40,7 @@
     .hamburger svg{width:20px;height:20px;display:block}
     @media (max-width:980px){
       .container{grid-template-columns:1fr;max-width:940px}
-      /* 手机端：在移动端直接显示侧边栏（不使用汉堡菜单） */
+      /* 手机端：在移动端直接显示侧边栏（不使用汉堡菜单，可选） */
       .sidebar{flex-direction:column;gap:12px;padding:18px;align-items:center;text-align:center;position:static;transform:none;transition:none;z-index:auto;border-radius:14px}
       .avatar{width:96px;height:96px}
       .links{grid-template-columns:repeat(3,auto);width:auto}
@@ -67,7 +67,7 @@
       <div class="links" id="basicLinks">
         <a href="https://v-blog.halei0v0.top" target="_blank" rel="noopener">
           <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 12v7a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 10l5-5 5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-          <span class="label">博客</span>
+          <span class="label">Blog</span>
         </a>
         <a href="https://space.bilibili.com/524530873?spm_id_from=333.1007.0.0" target="_blank" rel="noopener">
           <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 7c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v8c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V7z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"></path><path d="M8 11h8M8 14h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
