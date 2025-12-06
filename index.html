@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>个人导航 - 哈雷0V0</title>
+  <style>
+    :root{--bg:#071025;--card:#071428;--muted:#9fb0c6;--accent:#60a5fa;--glass:rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;color:#e6eef8;background:linear-gradient(180deg,var(--bg) 0%,#02101a 100%);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:28px}
+    .container{width:100%;max-width:1280px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);border-radius:14px;overflow:hidden;display:grid;grid-template-columns:360px 1fr;gap:0;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    .sidebar{background:var(--card);padding:34px;display:flex;flex-direction:column;align-items:center;text-align:center}
+    .avatar{width:160px;height:160px;border-radius:50%;overflow:hidden;border:4px solid rgba(255,255,255,0.05);background:linear-gradient(135deg,#081426,#0b1a2a)}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    h1{margin:16px 0 6px;font-size:22px;letter-spacing:0.4px}
+    .muted{color:var(--muted);font-size:14px;margin-bottom:10px}
+    /* links: grid 3 per row, icon + label */
+    .links{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:18px;width:100%;align-items:center;justify-items:center}
+    .links a{color:var(--accent);text-decoration:none;display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px;border-radius:10px;border:1px solid var(--glass);background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);width:100%;max-width:110px;transition:transform .18s ease,box-shadow .18s ease}
+    .links a:hover{transform:translateY(-4px);box-shadow:0 8px 18px rgba(3,10,30,0.5)}
+    .links .icon{width:28px;height:28px;display:block;fill:var(--accent)}
+    .links .label{font-size:12px;color:var(--muted)}
+    .main{padding:36px}
+    .header{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+    .title{font-size:20px;color:#eaf6ff;font-weight:600}
+    .sub{color:var(--muted);font-size:13px}
+    .repo-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+    .repo{background:linear-gradient(180deg,rgba(255,255,255,0.015),transparent);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);transition:transform .15s ease,box-shadow .15s ease}
+    .repo:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(2,8,24,0.6)}
+    .repo a{color:var(--accent);text-decoration:none;font-weight:700;font-size:15px}
+    .repo .desc{color:var(--muted);font-size:13px;margin-top:8px;min-height:36px}
+    .meta{display:flex;gap:12px;align-items:center;color:var(--muted);font-size:12px;margin-top:12px}
+    .spinner{width:32px;height:32px;border:4px solid rgba(255,255,255,0.06);border-top-color:var(--accent);border-radius:50%;animation:spin 1s linear infinite}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .empty{color:var(--muted);padding:18px;border-radius:8px;background:rgba(255,255,255,0.01)}
+    @media (max-width:980px){.container{grid-template-columns:1fr;max-width:940px}.sidebar{flex-direction:row;gap:16px;padding:18px;align-items:flex-start}.avatar{width:96px;height:96px}.links{grid-template-columns:repeat(3,auto);width:auto}.main{padding:20px}}
+  </style>
+</head>
+<body>
+  <div class="container" id="app">
+    <aside class="sidebar">
+      <div class="avatar"><img id="avatarImg" src="https://avatars.githubusercontent.com/u/0?v=4" alt="avatar"/></div>
+      <h1 id="displayName">哈雷0V0</h1>
+      <div class="muted" id="bio">一个神秘的up主，带你打开新的世界!</div>
+      <div class="links" id="basicLinks">
+        <a href="https://v-blog.halei0v0.top" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 12v7a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 10l5-5 5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          <span class="label">博客</span>
+        </a>
+        <a href="https://space.bilibili.com/524530873?spm_id_from=333.1007.0.0" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 7c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v8c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2V7z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"></path><path d="M8 11h8M8 14h5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+          <span class="label">Bilibili</span>
+        </a>
+        <a href="https://github.com/halei0v0" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.2.8-.5v-2c-3.3.7-4-1.4-4-1.4-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.6 1.2 1.6 1.2 1 .1 1.7.8 2.2 1.1.1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.4-5.5-6a4.6 4.6 0 0 1 1.2-3.1c-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1a4.6 4.6 0 0 1 1.2 3.1c0 4.6-2.8 5.6-5.5 6 .4.3.8 1 .8 2v3c0 .3.2.6.8.5A12 12 0 0 0 12 .5z" fill="currentColor"/></svg>
+          <span class="label">GitHub</span>
+        </a>
+      </div>
+    </aside>
+    <main class="main">
+      <div class="header">
+        <div>
+          <div class="title">项目与简介</div>
+          <div class="sub">The world is big！You have to see~【一个高中生UP主】</div>
+        </div>
+        <div id="statusArea"><div class="spinner" id="loadingSpinner"></div></div>
+      </div>
+      <div id="reposContainer">
+        <div class="empty">正在加载仓库……</div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const username = 'halei0v0';
+    const avatarImg = document.getElementById('avatarImg');
+    const displayName = document.getElementById('displayName');
+    const bio = document.getElementById('bio');
+    const reposContainer = document.getElementById('reposContainer');
+    const loadingSpinner = document.getElementById('loadingSpinner');
+
+    async function fetchGitHub() {
+      try {
+        const userRes = await fetch(`https://api.github.com/users/${username}`);
+        if (!userRes.ok) throw new Error('无法获取用户信息');
+        const user = await userRes.json();
+        avatarImg.src = user.avatar_url || avatarImg.src;
+        displayName.textContent = user.name || user.login || username;
+        bio.textContent = user.bio || (user.location ? user.location : 'GitHub 用户');
+
+        const reposRes = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=100`);
+        if (!reposRes.ok) throw new Error('无法获取仓库列表，可能触发了 API 速率限制');
+        const repos = await reposRes.json();
+        renderRepos(repos);
+      } catch (err) {
+        reposContainer.innerHTML = `<div class="empty">载入失败：${err.message}. 若本地打开文件导致跨域或速率限制问题，请使用本地静态服务器（见下方说明）。</div>`;
+        console.error(err);
+      } finally {
+        loadingSpinner.style.display = 'none';
+      }
+    }
+
+    function renderRepos(repos){
+      if (!Array.isArray(repos) || repos.length === 0){
+        reposContainer.innerHTML = '<div class="empty">未找到公开仓库。</div>';
+        return;
+      }
+      const list = document.createElement('div');
+      list.className = 'repo-list';
+      repos.sort((a,b)=> new Date(b.updated_at) - new Date(a.updated_at));
+      repos.forEach(r=>{
+        const el = document.createElement('div');
+        el.className = 'repo';
+        const name = document.createElement('div');
+        const link = document.createElement('a');
+        link.href = r.html_url;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        link.textContent = r.name;
+        name.appendChild(link);
+        const desc = document.createElement('div');
+        desc.className = 'desc';
+        desc.textContent = r.description || '—';
+        const meta = document.createElement('div');
+        meta.className = 'meta';
+        const lang = document.createElement('div');
+        lang.textContent = r.language ? `语言：${r.language}` : '';
+        const star = document.createElement('div');
+        star.textContent = `★ ${r.stargazers_count}`;
+        const updated = document.createElement('div');
+        const d = new Date(r.updated_at);
+        updated.textContent = `更新：${d.toLocaleDateString()}`;
+        meta.appendChild(lang);
+        meta.appendChild(star);
+        meta.appendChild(updated);
+        el.appendChild(name);
+        el.appendChild(desc);
+        el.appendChild(meta);
+        list.appendChild(el);
+      });
+      reposContainer.innerHTML = '';
+      reposContainer.appendChild(list);
+    }
+
+    fetchGitHub();
+  </script>
+
+  <!--
+    运行说明：如果直接打开文件无法加载 GitHub 数据，请在终端运行本地静态服务器：
+    Windows(cmd.exe):
+      python -m http.server 8000
+    然后在浏览器打开 http://localhost:8000/index.html
+  -->
+</body>
+</html>
